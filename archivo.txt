@@ -1,3 +1,5 @@
 prueba de edición
 prueba de modificado.
-Cambio de un repositorio a otro
+Cambio de un repositorio a otro.
+después de un merge para fusionar un repositorio.
+Nuevo cambio.
