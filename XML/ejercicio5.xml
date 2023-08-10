@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ejercicio5 -->
+<!DOCTYPE almacen 
+[
+<!ELEMENT almacen (productos)>
+<!ATTLIST almacen
+    empresa CDATA #REQUIRED>
+<!ELEMENT productos (producto*)>
+<!ELEMENT producto (nombre,precio,caracteristicas?)>
+<!ATTLIST producto
+    id CDATA #REQUIRED
+    nohay CDATA #IMPLIED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio
+    valor CDATA #REQUIRED
+    moneda CDATA #REQUIRED>
+<!ELEMENT caracteristicas (#PCDATA)>
+
+]>
+
+<almacen empresa="empresa">
+	<productos>
+		<producto id="A191">
+			<nombre>Teclado</nombre>
+			<precio valor="20" moneda="euros" />
+			<caracteristicas>15pulgadas</caracteristicas>
+		</producto>
+		<producto id="A167">
+			<nombre>Monitor14'</nombre>
+			<precio valor="20000" moneda="pesetas" />
+		</producto>
+		<producto id="A180" nohay="A167">
+			<nombre>Monitor15'</nombre>
+			<precio valor="20000" moneda="pesetas" />
+		</producto>
+	</productos>
+</almacen>

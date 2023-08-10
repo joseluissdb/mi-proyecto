@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<colegio xsi:noNamespaceSchemaLocation="ejercicioColegio2XSD.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <aulas>
+    <aula>
+      <hora>9AM</hora>
+      <profesor>Matricia Matriuska</profesor>
+      <asignatura>Climbing</asignatura>
+      <alumnos>
+        <alumno>Sor Herminia</alumno>
+      </alumnos>
+    </aula>
+  </aulas>
+</colegio>

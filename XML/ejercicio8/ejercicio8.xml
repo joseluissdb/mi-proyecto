@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<reservasviaje ID="R01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio8.xsd">
+    <vuelos>
+      <vuelo>
+        <numero>UX123</numero>
+        <origen>Tenerife</origen>
+        <destino>Lisboa</destino>
+        <horarios>
+          <salida>2023-07-30T10:00:00</salida>
+          <llegada>2023-08-07T12:00:00</llegada>
+        </horarios>
+      </vuelo>
+
+      <vuelo>
+          <numero>UX456</numero>
+          <origen>Dublin</origen>
+          <destino>Roma</destino>
+          <horarios>
+            <salida>2023-09-01T10:00:00</salida>
+            <llegada>2023-10-07T12:00:00</llegada>
+          </horarios>
+      </vuelo>
+    </vuelos>
+    
+    <aerolineas>
+      <aerolinea>
+        <nombre>Airvolar</nombre>
+        <contacto>
+          <telefono>634635315</telefono>
+          <email>viajescomfort@portuano.com</email>
+        </contacto>
+      </aerolinea>
+      
+      <aerolinea>
+        <nombre>Flirun</nombre>
+        <contacto>
+          <telefono>63565448</telefono>
+          <email>vuelodirecto@flyrun.com</email>
+        </contacto>
+      </aerolinea>
+    </aerolineas>
+    
+    <aeropuertos>
+      <aeropuerto>
+        <codigoIATA>DXB</codigoIATA>
+        <ubicacion>Dublin</ubicacion>
+      </aeropuerto>
+
+      <aeropuerto>
+        <codigoIATA>TNF</codigoIATA>
+        <ubicacion>Tenerife</ubicacion>
+      </aeropuerto>
+    </aeropuertos>
+    
+    <pasajeros>
+      <pasajero pasajeroID="p01">
+        <nombre>Juan Pérez</nombre>
+        <numeropasaporte>ABC123</numeropasaporte>
+        <contacto>
+          <telefono>987654321</telefono>
+          <email>juanperez@example.com</email>
+        </contacto>
+      </pasajero>
+      
+      <pasajero pasajeroID="p02">
+        <nombre>José Piña</nombre>
+        <numeropasaporte>DEF123</numeropasaporte>
+        <contacto>
+          <telefono>987544321</telefono>
+          <email>josepina@example.com</email>
+        </contacto>
+      </pasajero>
+      <pasajero pasajeroID="p03">
+        <nombre>José Piña</nombre>
+        <numeropasaporte>DEF123</numeropasaporte>
+        <contacto>
+          <telefono>987544321</telefono>
+          <email>josepina@example.com</email>
+        </contacto>
+      </pasajero>
+    </pasajeros>
+    
+    <reservas>
+      <reserva>
+        <vuelo>UX123</vuelo>
+        <pasajeros>
+          <pasajero>p01</pasajero>
+        </pasajeros>
+        <detallespago>
+          <metodo>tarjeta de crédito</metodo>
+          <monto>100.00</monto>
+        </detallespago>
+      </reserva>
+      
+      <reserva>
+        <vuelo>UX456</vuelo>
+        <pasajeros>
+          <pasajero>p02</pasajero>
+          <pasajero>p03</pasajero>
+        </pasajeros>
+        <detallespago>
+          <metodo>tarjeta de crédito</metodo>
+          <monto>120.00</monto>
+        </detallespago>
+      </reserva>
+    </reservas>
+  </reservasviaje>
+  

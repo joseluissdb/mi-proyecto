@@ -1,0 +1,135 @@
+﻿<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definición de tipo tituloDocumento -->
+    <xs:simpleType name="tituloDocumento">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Factura"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definición de tipo obligatorio nombreEmpresa -->
+    <xs:simpleType name="nombreEmpresa">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Electrónica de Consumo"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definición de tipo obligatorio direccionEmpresa -->
+    <xs:simpleType name="direccionEmpresa">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="c/ La Luna, sn"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definición de tipo obligatorio cifEmpresa -->
+    <xs:simpleType name="cifEmpresa">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="KK879879KK"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definición de tipo obligatorio mailEmpresa -->
+    <xs:simpleType name="mailEmpresa">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="electronicadeconsumo@mail.com"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Definición de tipo obligatorio telEmpresa -->
+    <xs:simpleType name="telEmpresa">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="999566587"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- Definición de tipo para el elemento datos_empresa -->
+    <xs:element name="datos_empresa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name='nombre' type='nombreEmpresa'/>
+                <xs:element name='direccion' type='direccionEmpresa'/>
+                <xs:element name='cif' type='cifEmpresa'/>
+                <xs:element name='mail' type='mailEmpresa'/>
+                <xs:element name='telefono' type='telEmpresa'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición de tipo para el elemento datos_cliente -->
+    <xs:element name="datos_cliente">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name='nombre' type='xs:string'/>
+                <xs:element name='direccion' type='xs:string'/>
+                <xs:element name='telefono' type='xs:string'/>
+                <xs:element name='mail' type='xs:string'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+        <!-- Definición de tipo para el elemento cabecera_factura -->
+        <xs:element name="cabecera_factura">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name='titulo' type='tituloDocumento'/>
+                    <xs:element name='fecha_factura' type="xs:date"/>
+                    <xs:element ref='datos_empresa'/>
+                    <xs:element ref='datos_cliente'/>
+                </xs:sequence>
+                <xs:attribute name='numero_factura' type='xs:ID' use="required"/>
+            </xs:complexType>
+        </xs:element>
+
+     <!-- Definición de tipo para el elemento linea_factura -->
+     <xs:element name="linea_factura">
+         <xs:complexType>
+             <xs:sequence>
+                 <xs:element name='cod_art' type='xs:integer'/>
+                 <xs:element name='descripcion' type='xs:string'/>
+                 <xs:element name='unidades' type='xs:integer'/>
+                 <xs:element name='precio' type='xs:decimal'/>
+                 <xs:element name='impuesto' type='xs:decimal'/>
+                 <xs:element name='total' type='xs:decimal'/>
+             </xs:sequence>
+         </xs:complexType>
+     </xs:element>
+
+    <!-- Definición de tipo para el elemento detalle_factura -->
+    <xs:element name="detalle_factura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='linea_factura' minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición de tipo para el elemento importe_factura -->
+    <xs:complexType name="importe_factura">
+        <xs:sequence>
+            <xs:element name='base_imponible' type='xs:decimal'/>
+            <xs:element name='igic' type='xs:decimal'/>
+            <xs:element name='total' type='xs:decimal'/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definición de tipo para el elemento pie_factura -->
+    <xs:element name="pie_factura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name='importe_factura' type="importe_factura"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición del elemento factura -->
+    <xs:element name="factura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref='cabecera_factura'/>
+                <xs:element ref='detalle_factura' minOccurs="1" maxOccurs="unbounded"/>
+                <xs:element ref='pie_factura'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

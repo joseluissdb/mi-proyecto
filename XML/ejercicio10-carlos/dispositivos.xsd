@@ -1,0 +1,212 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="nombre_dispositivo">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:maxLength value="32" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="categoria">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="6" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="nombre_marca">
+        <xs:simpleType>
+            <xs:restriction base="xs:token">
+                <xs:maxLength value="6" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="origen">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-zA-Z0]{6}-[a-zA-Z0]{6}" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="marca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre_marca"/>
+                <xs:element ref="origen"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="pantalla">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{2}'" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="bateria">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{2} C\(h\)" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="velocidad">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{2}.[0-9]{2} Mhz" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="procesador">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tipo" type="xs:string" />
+                <xs:element ref="velocidad" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="resolucion">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{2} MP" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="camara">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="resolucion" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="nombre_so">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="10" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="version_so">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{2}.[0-9]{2}" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="SO">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre_so" />
+                <xs:element ref="version_so" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="especificaciones_tecnicas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="pantalla"/>
+                <xs:element ref="bateria"/>
+                <xs:element ref="procesador" minOccurs="0"/>
+                <xs:element ref="camara" minOccurs="0"/>
+                <xs:element ref="SO" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:attribute name="moneda">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="EUR" />
+                <xs:enumeration value="USD" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:element name="precio">
+        <xs:simpleType>
+            <xs:restriction base='xs:string'>
+                <xs:pattern value="[0-9]{3}.[0-9]{2}" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="precio_dispositivo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="precio"/>
+            </xs:sequence>
+            <xs:attribute ref="moneda"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="stock">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:pattern value="[0-9]{3}" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="pasillo">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[0-9]{2}" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="estanteria">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-zA-Z0]{2}[0-9]{3}-[0-9]{2}" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="ubicacion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="pasillo"/>
+                <xs:element ref="estanteria"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="dispositivo">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="nombre_dispositivo"/>
+                <xs:element ref="categoria"/>
+                <xs:element ref="marca"/>
+                <xs:element ref="especificaciones_tecnicas"/>
+                <xs:element ref="precio_dispositivo"/>
+                <xs:element ref="stock"/>
+                <xs:element ref="ubicacion"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="catalogo_dispositivos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dispositivo" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

@@ -1,0 +1,197 @@
+------------------------------------------SHEMA------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<!-- declaro tipos desligados de un elemento contenedor y los declaro a cada uno por separado-->
+
+<xs:element name="colegio">
+    <xs:complexType >
+        <xs:sequence>
+            <!-- aqui especifico que solo puedo hacer 4 aulas en el colegio-->
+            <xs:element ref="aula" minOccurs="1" maxOccurs="4"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- elementos objeto a los cuales hago referencia cuando los necesite-->
+
+<xs:element name="aula">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="hora" type="xs:decimal"></xs:element>
+            <xs:element name="asignatura" type="xs:string"></xs:element>
+
+            <!-- aqui hago referencia a los elementos profesor y listado_alumnos (declarados mas abajo)-->
+            
+            <xs:element ref="profesor"></xs:element>
+
+ <!--    aqui hago referencia a listado de alumnos                               ||          -->
+ <!--          		 \/						         ||          -->
+            <xs:element ref="listado_alumnos"></xs:element>       <!--           \/          -->
+        
+        </xs:sequence>
+        <xs:attribute name="num_aula" type="xs:string"/>
+        <xs:attribute name="piso" type="xs:int"/>
+    </xs:complexType>
+</xs:element>
+
+<!-- declaro un elemento contenedor de alumnos y dentro de este referencio que va a contener 4 alumnos-->
+
+<xs:element name="listado_alumnos">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="alumno" minOccurs="1" maxOccurs="4"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="alumno">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="id_alumno" type="xs:int" minOccurs="1"></xs:element>
+            <xs:element name="nombre" type="xs:string" minOccurs="1"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="profesor">                                                         <!--PROFESOR-->
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="id_profesor" type="xs:int"></xs:element>
+            <xs:element name="nombre_profe" type="xs:string"></xs:element>
+            <xs:element name="materia" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+
+    
+</xs:schema>
+
+------------------------------------------SHEMA------------------------------------------------
+
+--------------------------------------------XML------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<colegio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="colegioShema.xsd">
+                                                                    
+                                                                    <!-- Creo el aula qu contiene dos atributos num-aula y piso -->
+    <aula num_aula="1" piso="1">
+                                                                    <!-- aula contiene hora,asignatura,profesor y listado de alumnos-->
+
+                                                                    <!-- elemento hora a la que inicia la clase, en este caso las  9-->
+                                                                    <!-- el relog es hora militar, asi no me complico la vida y accedo a los datos mas facilmente-->
+        <hora>9</hora>
+                                                                    <!-- declaro el nombre de la asignatura que se imparte en el aula-->
+        <asignatura>Fisica</asignatura>
+                                                                    <!-- declaro elemento profesor con las limitaciones colocadas en el shema-->
+        <profesor>
+            <id_profesor>1</id_profesor>
+            <nombre_profe>Newton</nombre_profe>
+            <materia>Fisica</materia>
+        </profesor>
+                                                                    <!-- declaro un listado de alumnos que contiene a los alumnos de la clase-->
+        <listado_alumnos>
+                                                                    <!-- declaro los alumnos asignandoles sus datos correspondientes-->
+            <alumno>
+                <id_alumno>1</id_alumno>
+                <nombre>Tesla</nombre>
+            </alumno>
+            <alumno>
+                <id_alumno>2</id_alumno>
+                <nombre>Einstein</nombre>
+            </alumno>
+            <alumno>
+                <id_alumno>3</id_alumno>
+                <nombre>Marie Curie</nombre>
+            </alumno>
+            <alumno>
+                <id_alumno>4</id_alumno>
+                <nombre>pepe</nombre>
+            </alumno>
+        </listado_alumnos>
+    </aula>
+    <aula num_aula="2" piso="1">
+                                                                                <!-- aula num 2 y hora 10-->
+        <hora>10</hora>
+        <asignatura>Matematica</asignatura>     <!-- Coloco distintos alumnos porque segun !Volver al futuro!-->
+                                                <!-- la misma materia NO puede ocupar dos espacios al mismo tiempo -->
+        <profesor>                              <!-- o el universo !!!!!KABOOM - KABOOM!!!! -->
+            <id_profesor>2</id_profesor>
+            <nombre_profe>Euclides</nombre_profe>
+            <materia>Filosofia</materia>
+        </profesor>
+        <listado_alumnos>
+            <alumno>
+                <id_alumno>5</id_alumno>
+                <nombre>Emmy Noether</nombre>
+            </alumno>
+            <alumno>
+                <id_alumno>6</id_alumno>
+                <nombre>Carl Friedrich Gauss</nombre>
+            </alumno>
+            <alumno>
+                <id_alumno>7</id_alumno>
+                <nombre>Ada Lovelace</nombre>
+            </alumno>
+            <alumno>
+                <id_alumno>8</id_alumno>
+                <nombre>Pierre de Fermat</nombre>
+            </alumno>
+        </listado_alumnos>
+    </aula>
+    <aula num_aula="3" piso="1">
+        <hora>11</hora>
+        <asignatura>Lengua</asignatura>
+        <profesor>
+            <id_profesor>3</id_profesor>
+            <nombre_profe>Virginia Woolf</nombre_profe>
+            <materia>Lengua</materia>
+        </profesor>
+        <listado_alumnos>
+            <alumno>
+                <id_alumno>9</id_alumno>
+                <nombre>Jane Austen</nombre>
+            </alumno>
+            <alumno>
+                <id_alumno>10</id_alumno>
+                <nombre>Toni Morrison</nombre>
+            </alumno>
+            <alumno>
+                <id_alumno>11</id_alumno>
+                <nombre>Isabel Allende</nombre>
+            </alumno>
+            <alumno>
+                <id_alumno>12</id_alumno>
+                <nombre>Emily Dickinson</nombre>
+            </alumno>
+        </listado_alumnos>
+    </aula>
+    <aula num_aula="4" piso="1">
+        <hora>12</hora>
+        <asignatura>Ciencias</asignatura>
+        <profesor>
+            <id_profesor>4</id_profesor>
+            <nombre_profe>Rosalind Franklin</nombre_profe>
+            <materia>Ciencias</materia>
+        </profesor>
+        <listado_alumnos>
+            <alumno>
+                <id_alumno>13</id_alumno>
+                <nombre>Galileo Galilei</nombre>
+            </alumno>
+            <alumno>
+                <id_alumno>14</id_alumno>
+                <nombre>Doctor Simi</nombre>
+            </alumno>
+            <alumno>
+                <id_alumno>15</id_alumno>
+                <nombre>Juanito</nombre>
+            </alumno>
+            <alumno>
+                <id_alumno>16</id_alumno>
+                <nombre>Claudio</nombre>
+            </alumno>
+        </listado_alumnos>
+    </aula>
+</colegio>
+--------------------------------------------XML------------------------------------------------

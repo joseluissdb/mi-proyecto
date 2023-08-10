@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT libros (titulo, autor , nombre , apellido)>
+<libros>
+    <libro id="1">
+        <titulo>El gran Gatsby</titulo>
+        <autor>
+            <nombre>F. Scott</nombre>
+            <apellido>Fitzgerald</apellido>
+        </autor>
+        <anio>1925</anio>
+    </libro>
+    <libro id="2">
+        <titulo>Matar un ruiseñor</titulo>
+        <autor>
+            <nombre>Harper</nombre>
+            <apellido>Lee</apellido>
+        </autor>
+        <anio>1960</anio>
+    </libro>
+</libros>

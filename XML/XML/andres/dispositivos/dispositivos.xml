@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="dispositivos.css" type="text/css"?>
+<!-- <!DOCTYPE dispositivos SYSTEM "dispositivos.dtd"> -->
+<!-- <dispositivos> -->
+<cointainer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="dispositivos.xsd">
+    <header>
+        <logo></logo>
+        <titulos>
+            <principal>Repairdroid</principal>
+            <subTitulo>Si te lo brickeamos te jodes!</subTitulo>
+        </titulos>
+    </header>
+    <dispositivos>
+
+        <dispositivo dID="D01">
+            <Nombre>Dispositivo Móvil 1</Nombre>
+            <Categoría>móvil</Categoría>
+            <Marca>
+                <MNombre>Marca A</MNombre>
+                <MOrigen>Pais Afd</MOrigen>
+            </Marca>
+            <EspecificacionesTecnicas>
+                <Pantalla>6.2 pulgadas</Pantalla>
+                <Batería>8h</Batería>
+                <Procesador>Octa-core 2.0 GHz</Procesador>
+                <Cámara>16 MP</Cámara>
+                <SistemaOperativo>
+                    <SONombre>Android</SONombre>
+                    <SOVersión>10.0</SOVersión>
+                </SistemaOperativo>
+            </EspecificacionesTecnicas>
+            <Precio>299.99</Precio>
+            <Moneda>USD</Moneda>
+            <Stock>50</Stock>
+            <Ubicación>
+                <Pasillo>03</Pasillo>
+                <Estanteria>01</Estanteria>
+            </Ubicación>
+        </dispositivo>
+        <dispositivo dID="D02">
+            <Nombre>Dispositivo Móvil 2</Nombre>
+            <Categoría>tablet</Categoría>
+            <Marca>
+                <MNombre>Marca B</MNombre>
+                <MOrigen>china taipei</MOrigen>
+            </Marca>
+            <EspecificacionesTecnicas>
+                <Pantalla>6.5 pulgadas</Pantalla>
+                <Batería>5h</Batería>
+                <Procesador>Octa-core 2.2 GHz</Procesador>
+                <Cámara>20 MP</Cámara>
+                <SistemaOperativo>
+                    <SONombre>iOS</SONombre>
+                    <SOVersión>15.0</SOVersión>
+                </SistemaOperativo>
+            </EspecificacionesTecnicas>
+            <Precio>549.99</Precio>
+            <Moneda>EUR</Moneda>
+            <Stock>30</Stock>
+            <Ubicación>
+                <Pasillo>04</Pasillo>
+                <Estanteria>02</Estanteria>
+            </Ubicación>
+        </dispositivo>
+    </dispositivos>
+</cointainer>
+<!-- 
+ID: Un identificador único.
+Nombre: El nombre del producto. Max 32c, Alfanuméricos, sin espacios.
+Categoría: Por ejemplo: móvil, laptop, tablet, etc. Max 6c, texto
+Marca: Información de la empresa que produce el dispositivo.
+    Nombre de la Marca: El nombre oficial de la marca/empresa. 6c texto
+    Origen: País de origen de la marca. 12 caracteres, dos bloques de 6.
+Especificaciones Técnicas: Detalles sobre las características del producto.
+    Pantalla: Tamaño y tipo de pantalla. Numérico 2 + símbolo, pulgadas
+    Batería: Duración o capacidad de la batería. Numérico 2 + C ( h )
+    Procesador: (Si es aplicable) Tipo y velocidad del procesador. 
+    Cámara: (Si es aplicable) Resolución o características de la cámara.
+    Sistema Operativo: (Si es aplicable) Información sobre el software del dispositivo.
+        Nombre del OS: Nombre del sistema operativo. Carácter 10
+        Versión: Versión específica del sistema operativo. Numérico 4, separados de dos en dos (.) 
+Precio: Costo del dispositivo.Numérico 3 decimales 2
+Moneda: Tipo de moneda en la que está valorado el precio (por ejemplo: USD, EUR).Numérico 4+2
+decimales
+Stock: Cantidad de unidades disponibles en la tienda. Numérico entero 3
+Ubicación : 
+    Pasillo: Numérico 2
+    Estanteria: Texto 2 Numero 3 – Numérico 2  -->

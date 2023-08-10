@@ -1,0 +1,141 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   
+   <xs:complexType name="miTipo">
+    <xs:sequence>
+        <xs:element name="miElement"></xs:element>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name="miTipo2">
+    <xs:sequence>
+        <xs:element name="miElement"></xs:element>
+    </xs:sequence>
+   </xs:complexType>
+   
+<xs:simpleType name="telefono">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="\+[1-9]\d{0,3}\s?\(?\d{1,}\)?\s?[-.\s]?\d{1,}[-.\s]?\d{1,}"></xs:pattern>
+    </xs:restriction>
+</xs:simpleType>
+    <!-- profesor nivel 3 -->
+  
+    <xs:element name="profesor">
+        <xs:complexType>
+            <xs:sequence>
+            <xs:element name="nombre" type="xs:string"></xs:element>
+            <xs:element name="apellido" type="xs:string"></xs:element>
+            <xs:element name="telefono" type="telefono"></xs:element>
+            <xs:element name="DNI" type="xs:string"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="id_profesor" type="xs:ID"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <!-- alumnos nivel 4 -->
+    
+       
+
+    <!-- alumnos nivel 3 -->
+    <xs:element name="alumnos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="alumno1"></xs:element>
+                <xs:element ref="alumno2"></xs:element>
+                <xs:element ref="alumno3"></xs:element>
+                <xs:element ref="alumno4"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="id_alumnos" type="xs:ID"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+<!-- listado de alumnos nivel 4  -->
+    
+    <xs:element name="alumno1">
+        <xs:complexType>
+            <xs:sequence>
+                    <xs:element name="nombre" fixed="Alice"></xs:element>
+                    <xs:element name="apellido" fixed="Smith"></xs:element>
+                    <xs:element name="telefono" fixed="987-654-3210"></xs:element>
+                    <xs:element name="DNI" fixed="987654321"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="alumno2">
+        <xs:complexType>
+            <xs:sequence>
+                    <xs:element name="nombre" fixed="Bob"></xs:element>
+                    <xs:element name="apellido" fixed="Johnson"></xs:element>
+                    <xs:element name="telefono" fixed="555-555-5555"></xs:element>
+                    <xs:element name="DNI" fixed="555555555"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="alumno3">
+        <xs:complexType>
+            <xs:sequence>
+                    <xs:element name="nombre" fixed="Eve"></xs:element>
+                    <xs:element name="apellido" fixed="Williams"></xs:element>
+                    <xs:element name="telefono" fixed="111-222-3333"></xs:element>
+                    <xs:element name="DNI" fixed="111222333"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="alumno4">
+        <xs:complexType>
+            <xs:sequence>
+                    <xs:element name="nombre" fixed="Evegfg"></xs:element>
+                    <xs:element name="apellido" fixed="Williamsfg"></xs:element>
+                    <xs:element name="telefono" fixed="111-222-3344"></xs:element>
+                    <xs:element name="DNI" fixed="111222344"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- definicion de header nivel 2 -->
+    <xs:element name="header">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="h1" type="xs:string" fixed="Escuela Todos Pasan"></xs:element>
+                <xs:element name="h2" type="xs:string"
+                    fixed="Aqui todos aprueban y si no lo forzamos"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- definicion de aula nivel 2 -->
+    <xs:element name="aula">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="profesor"></xs:element>
+                <xs:element name="asignatura" type="xs:string"></xs:element>
+                <xs:element ref="alumnos"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="id_aula" type="xs:ID"></xs:attribute>
+            <xs:attribute name="hora">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="(0?[1-9]|1[0-2]):[0-5][0-9] (AM|PM)"></xs:pattern>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <!-- definicion de escuela nivel 1 -->
+    <xs:element name="escuela">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="header" />
+                <xs:element ref="aula" minOccurs="1" maxOccurs="4"/>
+                <xs:element name="miEle" type="miTipo"></xs:element>
+                <xs:element name="miEle2">
+                    <xs:complexType>
+                        <xs:complexContent>
+                            <xs:extension base="miTipo">
+                                <xs:sequence>
+                                    <xs:element name="miElement2"></xs:element>
+                                </xs:sequence>
+                            </xs:extension>
+                        </xs:complexContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

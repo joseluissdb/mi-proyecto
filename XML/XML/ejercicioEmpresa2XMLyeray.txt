@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<factura xsi:noNamespaceSchemaLocation="ejercicioEmpresa2XSDyeray.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <seccion_empresa>
+    <nombre_empresa>Conchita S.L.</nombre_empresa>
+    <direccion>Avenida de la piruleta, calle de la gominola numero 6</direccion>
+    <mail>nomeacuerdo@mail.com</mail>
+    <tlf>662458732</tlf>
+  </seccion_empresa>
+  <seccion_cabecera>
+    <num_factura>654613</num_factura>
+    <fecha>2021-11-11</fecha>
+    <notas>Todo bien, todo correcto</notas>
+  </seccion_cabecera>
+  <seccion_cliente>
+    <cod_cliente>4843001</cod_cliente>
+    <nombre>Olivander Saturnino</nombre>
+    <direccion>debajo del puente de tome cano</direccion>
+    <email>compradorcompulsivo@mail.com</email>
+    <CIF>84574246</CIF>
+    <telefono>699337149</telefono>
+  </seccion_cliente>
+  <seccion_cuerpo>
+    <cod_art>65127</cod_art>
+    <descripcion>Tiene las esquinas dobladas</descripcion>
+    <unidades>3</unidades>
+    <precio>111.11</precio>
+    <impuesto>0.61</impuesto>
+    <total>333.33</total>
+  </seccion_cuerpo>
+  <seccion_total>
+    <base_imponible>2.2</base_imponible>
+    <IGIC>9.5</IGIC>
+    <total>999.99</total>
+  </seccion_total>
+</factura>

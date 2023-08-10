@@ -1,0 +1,99 @@
+-------------------------------------------SHEMA-----------------------------------------------
+<xs:element name="aplicacion">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="empresa" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nom_empresa" type="xs:string" fixed="farma"></xs:element>
+                        <xs:element name="direccion" type="xs:string" fixed="calle sur"></xs:element>
+                        <xs:element name="cif" type="xs:string" fixed="4563"></xs:element>
+                        <xs:element name="mail" type="xs:string" fixed="farmaamiga@gmail.com"></xs:element>
+                        <xs:element name="telefono" type="xs:string" fixed="45876958"></xs:element>
+                    </xs:sequence>   
+                    <xs:attribute name="id" type="xs:int" use="required"/>       
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="cabecera" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nFactura" type="xs:string"></xs:element>
+                        <xs:element name="fecha" type="xs:date"></xs:element>
+                        <xs:element name="notas" type="xs:string"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="total" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="base_imponible" type="xs:decimal"></xs:element>
+                        <xs:element name="igic" type="xs:decimal"></xs:element>
+                        <xs:element name="nota" type="xs:decimal"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="cliente" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="cod_cliente" type="xs:int"></xs:element>
+                        <xs:element name="nombre" type="xs:string"></xs:element>
+                        <xs:element name="direccion" type="xs:string"></xs:element>
+                        <xs:element name="telefono" type="xs:int"></xs:element>
+                        <xs:element name="email" type="xs:string"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="detalle" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="cod_art" type="xs:int"></xs:element>
+                        <xs:element name="descripcion" type="xs:string"></xs:element>
+                        <xs:element name="unidades" type="xs:int"></xs:element>
+                        <xs:element name="precio" type="xs:decimal"></xs:element>
+                        <xs:element name="impuesto" type="xs:decimal"></xs:element>
+                        <xs:element name="total" type="xs:decimal"></xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
+---------------------------------------shema-----------------------------------------------------------------
+---------------------------------------xml-----------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<aplicacion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio.xsd">
+  <empresa id="15">
+    <nom_empresa/>
+    <direccion/>
+    <cif/>
+    <mail/>
+    <telefono/>
+  </empresa>
+  <cabecera>
+    <nFactura>001</nFactura>
+    <fecha>2022-08-04</fecha>
+    <notas>1235</notas>
+  </cabecera>
+  <total>
+    <base_imponible>4563</base_imponible>
+    <igic>4853</igic>
+    <nota>00152</nota>
+  </total>
+  <cliente>
+    <cod_cliente>023</cod_cliente>
+    <nombre>antonio</nombre>
+    <direccion>calle otomano</direccion>
+    <telefono>785469582</telefono>
+    <email>antony@gmail.com</email>
+  </cliente>
+  <detalle>
+    <cod_art>001</cod_art>
+    <descripcion>lo mejor del mercado</descripcion>
+    <unidades>3</unidades>
+    <precio>520</precio>
+    <impuesto>35</impuesto>
+    <total>555</total>
+  </detalle>
+</aplicacion>
+---------------------------------------xml-----------------------------------------------------------------

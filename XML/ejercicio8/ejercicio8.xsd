@@ -1,0 +1,133 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   
+<!--nivel 1-->
+<xs:element name="reservasviaje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vuelos" type="vuelos"></xs:element>
+                <xs:element name="aerolineas" type="aerolineas"></xs:element>
+                <xs:element name="aeropuertos" type="aeropuertos"></xs:element>
+                <xs:element name="pasajeros" type="pasajeros"></xs:element>
+                <xs:element name="reservas" type="reservas"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="ID" type="xs:ID"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+<!-- nivel 2-->
+    <!-- vuelos hijo de reservasviaje-->
+    <xs:complexType name="vuelos">
+        <xs:sequence>
+            <xs:element name="vuelo" type="vuelo" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- aerolineas hijo de reservasviaje-->
+    <xs:complexType name="aerolineas">
+        <xs:sequence>
+            <xs:element name="aerolinea" type="aerolinea" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- aeropuertos hijo de reservasviaje-->
+    <xs:complexType name="aeropuertos">
+        <xs:sequence>
+            <xs:element name="aeropuerto" type="aeropuerto" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- pasajeros hijo de reservasviaje-->
+    <xs:complexType name="pasajeros">
+        <xs:sequence>
+            <xs:element name="pasajero" type="pasajero" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- reservas hijo de reservasviaje-->
+    <xs:complexType name="reservas">
+        <xs:sequence>
+            <xs:element name="reserva" type="reserva" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+<!-- nivel 3-->
+     <!-- vuelo hijo de vuelos-->
+     <xs:complexType name="vuelo">
+        <xs:sequence>
+            <xs:element name="numero" type="xs:string"></xs:element>
+            <xs:element name="origen" type="xs:string"></xs:element>
+            <xs:element name="destino" type="xs:string"></xs:element>
+            <xs:element name="horarios" type="horario"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- aerolinea hijo de aerolineas-->
+    <xs:complexType name="aerolinea">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"></xs:element>
+            <xs:element name="contacto" type="contacto"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- aeropuerto hijo de aeropuertos-->
+    <xs:complexType name="aeropuerto">
+        <xs:sequence>
+            <xs:element name="codigoIATA" type="xs:string"></xs:element>
+            <xs:element name="ubicacion" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- pasajero hijo de pasajeros-->
+    <xs:complexType name="pasajero">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"></xs:element>
+            <xs:element name="numeropasaporte" type="xs:string"></xs:element>
+            <xs:element name="contacto" type="contacto"></xs:element>                        
+        </xs:sequence>
+        <xs:attribute name="pasajeroID" type="xs:ID"></xs:attribute>
+    </xs:complexType>
+
+    <!-- reserva hijo de reservas-->
+    <xs:complexType name="reserva">
+        <xs:sequence>
+            <xs:element name="vuelo" type="xs:string"></xs:element>
+            <xs:element name="pasajeros" type="pasajerosR"></xs:element>
+            <xs:element name="detallespago" type="detallespago"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+<!--nivel 4-->
+<xs:complexType name="pasajerosR">
+    <xs:sequence>
+        <xs:element name="pasajero" type="xs:IDREFS" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+</xs:complexType>
+    <!--horario hijo de vuelo-->
+    <xs:complexType name="horario">
+        <xs:sequence>
+            <xs:element name="salida" type="xs:string"></xs:element>
+            <xs:element name="llegada" type="xs:string"></xs:element>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--contacto hijo de aerolinea y pasajero-->
+    <xs:complexType name="contacto">
+        <xs:sequence>
+            <xs:element name="telefono" type="xs:string"></xs:element>
+            <xs:element name="email" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+   
+
+    <!--detallespago hijo de reserva-->
+    <xs:complexType name="detallespago">
+        <xs:sequence>
+            <xs:element name="metodo" type="xs:string"></xs:element>
+            <xs:element name="monto" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+
+</xs:schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tienda.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<tienda>
+    <pro>
+        <producto>
+            <nombre>giogio</nombre>
+            <precio>230</precio>
+            <descricion>stivale alto</descricion>
+            <categoria>
+                <
+            </categoria>
+        </producto>
+    </pro>
+    <usu>
+        <usuario>
+           <nombre>mario rossi</nombre>
+           <prod_comp>zapatos,phon,gafas</prod_comp>
+           <direcion>
+            <calle>fifi</calle>
+            <num>9</num>
+            <ciudad>sivilla</ciudad>
+            <pais>espana</pais>
+           </direcion>
+           <tel>456-456-456</tel>
+        </usuario>
+    </usu>
+    <ct_prd>
+        <cat_producto>
+            <nombre>zapatos</nombre>
+            <sub_cat_A>
+                <nombre>botas</nombre>
+            </sub_cat_A>
+        </cat_producto>
+    </ct_prd>
+</tienda>

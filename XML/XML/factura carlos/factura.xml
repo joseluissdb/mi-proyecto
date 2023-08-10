@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<factura xsi:noNamespaceSchemaLocation="factura.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <cabecera_factura numero_factura='FAC23-0125'>
+    <titulo>Factura</titulo>
+    <fecha_factura>2023-02-23</fecha_factura>
+    <datos_empresa>
+        <nombre>Electrónica de Consumo</nombre>
+        <direccion>c/ La Luna, sn</direccion>
+        <cif>KK879879KK</cif>
+        <mail>electronicadeconsumo@mail.com</mail>
+        <telefono>999566587</telefono>
+    </datos_empresa>
+    <datos_cliente>
+        <nombre></nombre>
+        <direccion></direccion>
+        <telefono></telefono>
+        <mail></mail>
+    </datos_cliente>
+   </cabecera_factura>
+   <detalle_factura>
+       <linea_factura>
+           <cod_art>546465</cod_art>
+           <descripcion>kk d la vaca</descripcion>
+           <unidades>12</unidades>
+           <precio>212.00</precio>
+           <impuesto>212.3</impuesto>
+           <total>212.3</total>
+       </linea_factura>
+   </detalle_factura>
+   <pie_factura>
+       <importe_factura>
+           <base_imponible>212.3</base_imponible>
+           <igic>212.3</igic>
+           <total>212.3</total>
+       </importe_factura>
+   </pie_factura>
+</factura>

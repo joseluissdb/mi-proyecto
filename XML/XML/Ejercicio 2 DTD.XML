@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE proveedores[
+  <!ELEMENT proveedores (proveedor*)>
+  <!ELEMENT proveedor (nombre,productos,telefono?)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT productos (producto*)>
+  <!ELEMENT producto (#PCDATA)>
+  <!ELEMENT telefono (#PCDATA)>
+]>
+
+<proveedores>
+
+ <proveedor>
+    <nombre>VENCE</nombre>
+    <productos>
+      <producto>Leche</producto>
+      <producto>Flan</producto>
+    </productos>
+
+ </proveedor>
+  
+  <proveedor>
+      <nombre>EL BARCO</nombre>
+      <productos>
+        <producto>Bacalao</producto>
+      </productos>
+        <telefono>91244488</telefono>
+  </proveedor>
+
+</proveedores>

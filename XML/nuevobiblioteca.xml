@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--ejercicio4-->
+<!DOCTYPE biblioteca 
+   [
+   <!ELEMENT biblioteca (nombre_biblioteca,ubicacion,contacto,libros)> 
+   <!ELEMENT nombre_biblioteca (#PCDATA)>
+   <!ELEMENT ubicacion (#PCDATA)>
+   <!ELEMENT contacto (#PCDATA)>
+   <!ELEMENT libros (libro+)> 
+   <!ELEMENT libro (titulo,autores,genero,anio_publicacion,palabra_clave)>
+    <!ELEMENT titulo (#PCDATA)> 
+    <!ELEMENT autores (autor)> 
+    <!ELEMENT autor (nombre,nacionalidad,bibliografia?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT nacionalidad (#PCDATA)>
+    <!ELEMENT bibliografia (#PCDATA)>
+    <!ELEMENT genero (#PCDATA)>
+    <!ELEMENT anio_publicacion (#PCDATA)>
+    <!ELEMENT palabra_clave (#PCDATA)>
+]>
+
+<biblioteca>
+    
+    <nombre_biblioteca>Biblioteca Municipal</nombre_biblioteca>
+    <ubicacion>La Candelaria</ubicacion>
+    <contacto>+34555555555</contacto>
+    
+    <libros>
+        <libro>
+            <titulo>Doña Bárbara</titulo>
+            <autores>
+                <autor>
+                    <nombre>Rómulo Gallegos</nombre>
+                    <nacionalidad>Venezolano</nacionalidad>
+                    <bibliografia>Nació en Vzla...</bibliografia>
+                </autor>
+            </autores>
+            <genero>Novela</genero>
+            <anio_publicacion>1929</anio_publicacion>
+            <palabra_clave>barbara</palabra_clave>
+        </libro>
+
+        <libro>
+            <titulo>Lo que el viento se llevó</titulo>
+            <autores>
+                <autor>
+                    <nombre>Margaret Mitchell</nombre>
+                    <nacionalidad>Estadounidense</nacionalidad>
+                    <bibliografia>Nació en USA...</bibliografia>
+                </autor>
+            </autores>
+            <genero>Novela</genero>
+            <anio_publicacion>1936</anio_publicacion>
+            <palabra_clave>viento</palabra_clave>
+        </libro>
+
+        <libro>
+            <titulo>Cuando quiero llorar no lloro</titulo>
+            <autores>
+                <autor>
+                    <nombre>Miguel Otero Silva</nombre>
+                    <nacionalidad>Venezolano</nacionalidad>
+                    <bibliografia>Nació en Vzla...</bibliografia>
+                </autor>
+            </autores>
+            <genero>Novela</genero>
+            <anio_publicacion>1970</anio_publicacion>
+            <palabra_clave>viento</palabra_clave>
+        </libro>
+    </libros>
+</biblioteca>

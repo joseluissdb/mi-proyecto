@@ -1,0 +1,137 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- TIPOS SEPARADOS -->
+    <xs:simpleType name="categoria">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="móvil"></xs:enumeration>
+            <xs:enumeration value="laptop"></xs:enumeration>
+            <xs:enumeration value="tablet"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="char32">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="32"></xs:maxLength>
+            <xs:minLength value="2"></xs:minLength>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="char6">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="32"></xs:maxLength>
+            <xs:minLength value="2"></xs:minLength>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="dosPalabras">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z]{1,6} [a-zA-Z]{1,6}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- LEVEL 4 -->
+
+    <xs:complexType name="SistemaOperativo">
+        <xs:sequence>
+            <xs:element name="SONombre" type="char32"></xs:element>
+            <xs:element name="SOVersión" type="char32"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- LELEV 3 -->
+    <xs:complexType name="Marca">
+        <xs:sequence>
+            <xs:element name="MNombre" type="char6"></xs:element>
+            <xs:element name="MOrigen" type="dosPalabras"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="EspecificacionesTecnicas">
+        <xs:sequence>
+            <xs:element name="Pantalla">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]+(\.[0-9]+)? (pulgadas|cm)" />
+                    </xs:restriction>
+                </xs:simpleType>
+
+
+            </xs:element>
+            <xs:element name="Batería">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[1-9]h" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Procesador">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Za-z0-9-]+ [0-9]+(\.[0-9]+)? [A-Za-z]+" />
+                    </xs:restriction>
+                </xs:simpleType>
+
+
+            </xs:element>
+            <xs:element name="Cámara" type="xs:string"></xs:element>
+            <xs:element name="SistemaOperativo" type="SistemaOperativo"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="Ubicación">
+        <xs:sequence>
+            <xs:element name="Pasillo" type="char32"></xs:element>
+            <xs:element name="Estanteria" type="char32"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- LEVEL 2 -->
+
+    <xs:complexType name="dispositivo">
+        <xs:sequence>
+            <xs:element name="Nombre"></xs:element>
+            <xs:element name="Categoría" type="categoria"></xs:element>
+            <xs:element name="Marca" type="Marca"></xs:element>
+            <xs:element name="EspecificacionesTecnicas" type="EspecificacionesTecnicas"></xs:element>
+            <xs:element name="Precio" type="char32"></xs:element>
+            <xs:element name="Moneda" type="char32"></xs:element>
+            <xs:element name="Stock" type="char32"></xs:element>
+            <xs:element name="Ubicación" type="Ubicación"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="dID" type="xs:ID"></xs:attribute>
+    </xs:complexType>
+
+
+    <!-- LEVEL 1 -->
+    
+        <xs:complexType name="dispositivos">
+            <xs:sequence>
+                <xs:element name="dispositivo" maxOccurs="unbounded" type="dispositivo"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+    <!-- LEVEL 0 -->
+
+    <xs:element name="cointainer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="header">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="logo" type="xs:string"></xs:element>
+                            <xs:element name="titulos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="principal" type="xs:string"></xs:element>
+                                        <xs:element name="subTitulo" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="dispositivos" type="dispositivos"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

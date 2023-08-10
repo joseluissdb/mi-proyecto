@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="empleados">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="empleado" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="edad" type="xs:int"/>
+              <xs:element name="cargo" type="xs:string"/>
+              <xs:element name="departamento" type="xs:string"/>
+              <xs:element name="sueldo" type="xs:decimal"/>
+              <xs:element name="fechanacimiento">
+                <xs:simpleType>
+                  <xs:restriction base="xs:date">
+                    <xs:minInclusive value="0001-01-01"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechacontratacion" type="xs:date"/>
+              <xs:element name="fechafallecimiento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:date">
+                    <xs:minInclusive value="0001-01-01"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fichacompleta" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="cod" type="xs:ID" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

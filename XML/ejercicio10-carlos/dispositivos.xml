@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalogo_dispositivos xsi:noNamespaceSchemaLocation="dispositivos.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dispositivo>
+      <nombre_dispositivo>Dispositivo1</nombre_dispositivo>
+      <categoria>Cat1</categoria>
+      <marca>
+        <nombre_marca>Marca1</nombre_marca>
+        <origen>Origen-ABCDEF</origen>
+      </marca>
+      <especificaciones_tecnicas>
+        <pantalla>15'</pantalla>
+        <bateria>20 C(h)</bateria>
+        <procesador>
+          <tipo>Tipo1</tipo>
+          <velocidad>02.00 Mhz</velocidad>
+        </procesador>
+        <camara>
+          <resolucion>12 MP</resolucion>
+        </camara>
+        <SO>
+          <nombre_so>SO1</nombre_so>
+          <version_so>01.01</version_so>
+        </SO>
+      </especificaciones_tecnicas>
+      <precio_dispositivo moneda="EUR">
+        <precio>599.99</precio>
+      </precio_dispositivo>
+      <stock>100</stock>
+      <ubicacion>
+        <pasillo>01</pasillo>
+        <estanteria>AB123-45</estanteria>
+      </ubicacion>
+    </dispositivo>
+  </catalogo_dispositivos>
+  

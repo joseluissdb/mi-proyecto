@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Receta SYSTEM "receta.dtd">
+<Receta>
+    <Nombre>Sopa de cebolla</Nombre>
+    <Porciones>4</Porciones>
+    <Ingredientes>
+        <Ingrediente>1 Kg. de cebollas</Ingrediente>
+        <Ingrediente>2 l. de caldo de carne</Ingrediente>
+        <Ingrediente>100 gr. mantequilla</Ingrediente>
+        <Ingrediente>1 cucharada de harina</Ingrediente>
+        <Ingrediente>100 gr. de queso emmental suizo o gruyére rallado</Ingrediente>
+        <Ingrediente>Pan tostado en rebanadas</Ingrediente>
+        <Ingrediente>Tomillo</Ingrediente>
+        <Ingrediente>1 hoja de laurel</Ingrediente>
+        <Ingrediente>Pimienta</Ingrediente>
+    </Ingredientes>
+    <Proceso>
+        <Paso>Pelar y partir las cebollas en rodajas finas.</Paso>
+        <Paso>Rehogarlas con la mantequilla, sal y pimienta a fuego lento hasta que estén transparentes sin dorarse.</Paso>
+        <Paso>Añadir la harina sin dejar de remover.</Paso>
+        <Paso>Ponerlo en una cazuela con el caldo, el tomillo y el laurel.</Paso>
+        <Paso>Dejar cocer a fuego lento durante unos 15 minutos.</Paso>
+        <Paso>Poner las rebanadas de pan encima, espolvorear el queso y gratinar al horno.</Paso>
+    </Proceso>
+</Receta>
+
+En este caso, el elemento raíz es Receta y tiene varios elementos hijos, incluyendo Nombre, Porciones, Ingredientes y Proceso. El elemento Ingredientes puede contener varios elementos Ingrediente, y el elemento Proceso puede contener varios elementos Paso.
+Asegúrate de cambiar "receta.dtd" a la ruta donde tienes guardado tu archivo DTD.
+
+SHEMA
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Receta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Nombre" type="xs:string"/>
+        <xs:element name="Porciones" type="xs:int"/>
+        <xs:element name="Ingredientes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ingrediente" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Proceso">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Paso" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

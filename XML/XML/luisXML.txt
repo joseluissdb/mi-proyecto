@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ciclo_formativo[
+<!ELEMENT ciclo_formativo (modulo*)>
+<!ELEMENT modulo (alumnos)>
+<!ELEMENT alumnos (alumno*)>
+<!ELEMENT alumno (nombre,horas,fecha)>
+<!ATTLIST alumno matricula CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT horas (#PCDATA) #REQUIRED> <!--sin el REQUIRED funciona perfectamente-->
+<!ELEMENT fecha (inicio,fin)>
+<!ELEMENT inicio (#PCDATA)>
+<!ELEMENT fin (#PCDATA)>
+]>
+
+<ciclo_formativo>
+
+  <modulo>
+  
+    <alumnos>
+    
+      <alumno matricula="true">
+        <nombre>Pepe</nombre>
+        <horas>4</horas>
+        <fecha>
+          <inicio>20/09/2021</inicio>
+          <fin>30/06/2022</fin>
+        </fecha>
+      </alumno>
+      
+      <alumno matricula="true">
+        <nombre>Antonia</nombre>
+        <horas>4</horas>
+        <fecha>
+          <inicio>20/09/2021</inicio>
+          <fin>30/06/2022</fin>
+        </fecha>
+      </alumno>
+      
+      <alumno matricula="false">
+        <nombre>Maria</nombre>
+        <horas>4</horas>
+        <fecha>
+          <inicio>20/09/2021</inicio>
+          <fin>30/06/2022</fin>
+        </fecha>
+      </alumno>
+      
+    </alumnos>
+    
+  </modulo>
+  
+</ciclo_formativo>

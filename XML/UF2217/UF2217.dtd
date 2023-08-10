@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT empleados (empleado+)>
+<!ELEMENT empleado (nombre, edad, cargo, departamento, sueldo, fechanacimiento, fechacontratacion, fechafallecimiento?, fichacompleta?)>
+<!ATTLIST empleado cod CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT cargo (#PCDATA)>
+<!ELEMENT departamento (#PCDATA)>
+<!ELEMENT sueldo (#PCDATA)>
+<!ELEMENT fechanacimiento (#PCDATA)>
+<!ELEMENT fechacontratacion (#PCDATA)>
+<!ELEMENT fechafallecimiento (#PCDATA)>
+<!ELEMENT fichacompleta (#PCDATA)>

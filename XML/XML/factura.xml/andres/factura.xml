@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="factura.css" type="text/css"?>
+<factura xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="factura.xsd">
+    <titulos>
+      <h1>Empresa Andres</h1>
+      <h2>Factura</h2>
+      <h3>Sociedad Anonima</h3>
+    </titulos>
+    <encabezado>
+            <nombre>Nombre:cvxv</nombre>
+            <direccion>direccion:AvenidaPalencia</direccion>
+            <CIF>CIF:E8888675</CIF>
+            <mail>mail:andres@gmail.com</mail>
+            <telefono>telefono:+346745678</telefono>
+    </encabezado>
+    <facturaInfo>
+        <nFactura>nFactura:12345</nFactura>
+        <fecha>fecha:08-02-2023</fecha>
+        <importeTotal>importeTotal:250.00</importeTotal>
+        <impuesto>impuesto:12%</impuesto>
+        <base_imponible>base_imponible:200.00</base_imponible>
+        <nota>nota:Factura de ejemplo</nota>
+      </facturaInfo>
+      
+      <cliente>
+        <cod>cod:C001</cod>
+        <nombre>nombre:John Doe</nombre>
+        <direccion>direccion:123 Main Street</direccion>
+        <telefono>telefono:+1 555-123-4567</telefono>
+        <email>email:john.doe@example.com</email>
+      </cliente>
+      
+      <facturaDetalle>
+        <titles>
+            <title_cod>cod</title_cod>
+            <title_descripcion>descripcion</title_descripcion>
+            <title_unidades>unidades</title_unidades>
+            <title_precio>precio</title_precio>
+            <title_impuesto>impuesto</title_impuesto>
+            <title_total>total</title_total>
+        </titles>
+        <factura>
+          <cod>F001</cod>
+          <descripcion>Producto 1</descripcion>
+          <unidades>2</unidades>
+          <precio>50.00</precio>
+          <impuesto>10</impuesto>
+          <total>100.00</total>
+        </factura>
+     
+        <factura>
+          <cod>F002</cod>
+          <descripcion>Producto 2</descripcion>
+          <unidades>1</unidades>
+          <precio>75.00</precio>
+          <impuesto>12</impuesto>
+          <total>75.00</total>
+        </factura>
+      </facturaDetalle>
+    <resumen>
+        <subtotal>subtotal:100.23</subtotal>
+        <impuesto>impuesto:1%</impuesto>
+        <total>total:112.23</total>
+    </resumen>
+</factura>

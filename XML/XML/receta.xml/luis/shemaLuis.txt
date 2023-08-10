@@ -1,0 +1,117 @@
+-----------------------------------------Shema-------------------------------------------------------
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="restaurante">
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="recetas_cocina" > 
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="receta">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="cant_cos" type="xs:int"/>
+                    <xs:element name="ingredientes" >
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ingrediente" type="xs:string" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="proceso">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="paso" type="xs:string" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="nombre" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+-----------------------------------------Shema-------------------------------------------------------
+   ....
+              d@@@@@@bo      @@.
+               ~~~~~ Y@@     Y@@.
+                   .o@@@@@b.  Y@@
+                  d@@@@@@@@@@b @P                     ...
+                 @P ~P~    @@@@P                    ,d@@@P---__
+                dP          d@P                    / @P        -dY@@b
+             t=_@  d ab   .o@@~      ...          / @@           \ YP
+             |   - @_@~  .d@@@...++++++++++.......|______         |
+             k _  (__)  ~~Y@@@F+++++oo|oo+++++_-~~  /@   ~~---____|
+            ( Y |\    ,T   Y@@OOOOOOO~^~OOO.-~ __.Ao@@b   a    .@@) __
+             \  |_`--'     dP              \---   V     @_@   d@@@ (_ \   __
+           ...-_   ~-____-~                |      (   T (_),T   Y@F  ) v~~__)
+        ++++++++-___ )@@@b           ,')    `_     \ ( \_,'/     )++>k   <_
+       .+++oodOOOP__)@@@@@b      __  ( \      ~--__ \\\n  //__--ooCCU\   _ \
+   ..++++++OO    @@/@@@@@@@b    (_ ~~~ ,>.         ~~\>~~v/     oCCP+++| |\_)
+.++++++odOOOP   @@/@@@@@@@@@@b    ~~> / r)@CCCCCCoooo(   )  .ooCCC~Obo+\,+++.
++++b\OOP~~     @@/@@@@@@@@@@@@@b _r~v','     ~~CCCCCCC\_/CCCCCCC~  ~~YOO/d+++
++++OOO        @@/@@@P,>----.@@Y@(_>--'            CCCCCCCCCCCC~        OOO+++
+`++*OO       @@@@@P ((__-^-__)U@@@@@             dCCCCCCCCCCC          OO*++'
+ +++OOb      @@@P....++++++++++++++++++++++++++++++++++*YCCCC         dOO+++
+ `++OOO  ....+++++++++++++++| \++/ |+/  \+++|  \+| |++++++++++++....  OOO++'
+  +++OO*+++++++++++++| |+| ||  \/  |/ /\ \++|   \| || |++/  \++++++++*OO+++
+ _+++++++++++++|   ~-| |+| ||      | ____ \+| |\ \ || |+/ /\ \++/   )++++++_
+< ++++++/  \+++| |-__   |+| |_|\/|_|/++++\ \| |+\  || |/ ____ \/ /+++/ _ \++>
+ \+++++/ /\ \++|  |++-__|+|_|+++++++@@+++d@_+_|++\_||_|_/++++\_| |++( (+\/+/
+  \+++/ ____ \++| |+++++++++++++++++Y@b.@@+++++++++++++++++++++\  )++\ \++/
+   \++_/++++\_+++++++oooOOOOODROOOOOb@@@@dOOGUZOOOOOoooooo+++++++++'\/ /+/
+   \+++++++++++++OOOOO~~~~~        ,-\  /-.       ~~~~~~~OOOOOoo+++\__/++/
+    \++++++++OOP~   .              (_, O _/                 ~~OOOOO+++++/
+     \+dOOOOOO.    | Y~.            (__d._)                   .OOOOOOb+/
+      OO(+++OOO.   | r.|    ....oood@@@@@@@@oooo@F           .OOO+++)OO
+       ~~O+++OOOo   Y ||   _Y@@@@@@P   ~V~  Y@@@@F          o000+++O~~
+          ~`++*OOb  | r_\_/ _)@@@@@          @@@@f  __     ,--*++'~
+            `++*OOb. \  `. / ~@@@@@    a a   @@@@  (_ `---'  ~~)'
+             ~+++OOOo `-._Y)   @@@@b   @_@  d@@@     lv'~   ~~+~
+               `++*OOb   (_@b   Y@~ T  (_) T   )   d@Uknnn+++'
+                ~+++OOOb    Yb.  (  |\    /|  / od@P bdOO+++~
+                  `+++OOOb   Y@b  `-| `--',',d@@@P dOOO+++'
+                   ~++++OOOb   Y@b  \\nn //@@@@P dOOO++++~
+                     ~++++OOOb  ~@@@@\`-'/@@@P~dOOO++++~
+                       ~++++OOOb  Y@@@@@@@@@~dOOO++++~
+                         ~++++*OObo@@@@@@@odOO*++++~
+                           ~~++++*OOOb|dOOO*++++~~
+                              ~~+++++*|*+++++~~
+                                  ~~+++++~~                       
+                                      ~   
+-----------------------------------------Cocina------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+
+<restaurante xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cocina.xsd">
+  <recetas_cocina>
+    <receta nombre="Sopa de cebolla">
+      <cant_cos>4</cant_cos>
+      <ingredientes>
+        <ingrediente>1 Kg. de cebollas</ingrediente>
+        <ingrediente>2 l. de caldo de carne</ingrediente>
+        <ingrediente>100 gr. mantequilla</ingrediente>
+        <ingrediente>1 cucharada de harina</ingrediente>
+        <ingrediente>100 gr. de queso emmental suizo o gruyére rallado</ingrediente>
+        <ingrediente>Pan tostado en rebanadas</ingrediente>
+        <ingrediente>Tomillo</ingrediente>
+        <ingrediente>1 hoja de laurel</ingrediente>
+        <ingrediente>Pimienta</ingrediente>
+      </ingredientes>
+      <proceso>
+        <paso>Pelar y partir las cebollas en rodajas finas.</paso>
+        <paso>Rehogarlas con la mantequilla, sal y pimienta a fuego lento hasta que estén transparentes sin dorarse.</paso>
+        <paso>Añadir la harina sin dejar de remover.</paso>
+        <paso>Ponerlo en una cazuela con el caldo, el tomillo y el laurel.</paso>
+        <paso>Dejar cocer a fuego lento durante unos 15 minutos.</paso>
+        <paso>Poner las rebanadas de pan encima, espolvorear el queso y gratinar al horno.</paso>
+      </proceso>
+    </receta>
+  </recetas_cocina>
+</restaurante>
+-----------------------------------------Cocina------------------------------------------------------

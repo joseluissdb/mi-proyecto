@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="file.css" type="text/css"?>
+<libros><libro id="Encabezado">        
+        <titulo>Título</titulo>
+        <autor>autor</autor>
+        <año>año</año>
+        <bibliografia>bibliografia</bibliografia>
+   
+    </libro>
+        <libro id="Doña Bárbara">        
+            <titulo>Doña Bárbara</titulo>
+            <autor>
+                <nombre>Rómulo</nombre>
+                <apellido>Gallegos</apellido>
+            </autor>
+            <año>1929</año>
+            <bibliografia></bibliografia>
+       
+    </libro>
+        <libro id="Cien años de soledad">        
+            <titulo>Cien años de soledad</titulo>
+            <autor>
+                <nombre>Gabriel</nombre>
+                <apellido>García Márquez</apellido>
+            </autor>
+            <año>1967</año>
+            <bibliografia></bibliografia>
+       
+    </libro>
+        <libro id="Los ríos progundos">        
+            <titulo>Los ríos profundos</titulo>
+            <autor>
+                <nombre>Arturo</nombre>
+                <apellido>Uslar Pietri</apellido>
+            </autor>
+            <año>1958</año>
+            <bibliografia></bibliografia>
+       
+    </libro>
+</libros>

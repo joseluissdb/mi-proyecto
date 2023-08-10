@@ -1,0 +1,16 @@
+<!ELEMENT cocina (receta*)>
+<!ELEMENT receta (ID,nombre,ingredientes,proceso)>
+<!ATTLIST receta 
+vegano CDATA #REQUIRED 
+noGluten CDATA #REQUIRED
+noLactosa CDATA #REQUIRED 
+dificultad CDATA #REQUIRED 
+cantidadComensales CDATA #REQUIRED>
+<!ELEMENT ID (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ingredientes (ingrediente*)>
+<!ELEMENT ingrediente (#PCDATA)>
+<!ATTLIST ingredientes cantidadIngredientes CDATA #REQUIRED>
+<!ELEMENT proceso (paso*)>
+<!ATTLIST proceso pasos CDATA #REQUIRED>
+<!ELEMENT paso (#PCDATA)>

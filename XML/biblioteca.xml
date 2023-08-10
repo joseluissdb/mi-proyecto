@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<biblioteca>
+    <libros>
+        <libro id="ISBN123">        
+                <titulo>Doña Bárbara</titulo>
+                <autor>
+                    <nombre>Rómulo</nombre>
+                    <apellido>Gallegos</apellido>
+                </autor>
+                <año>1929</año>
+                <genero>novela</genero>
+                <editorial>la primera</editorial>
+                <disponible>si</disponible>
+        </libro>
+
+        <libro id="ISBN456">        
+                <titulo>Cien años de soledad</titulo>
+                <autor>
+                    <nombre>Gabriel</nombre>
+                    <apellido>García Márquez</apellido>
+                </autor>
+                <año>1967</año>
+                <genero>novela</genero>
+                <editorial>el ccidente</editorial>
+                <disponible>no</disponible>
+        </libro>
+
+        <libro id="ISBN789">        
+                <titulo>Los ríos profundos</titulo>
+                <autor>
+                    <nombre>Arturo</nombre>
+                    <apellido>Uslar Pietri</apellido>
+                </autor>
+                <año>1958</año>
+                <genero>novela</genero>
+                <editorial>ediciones enlaces</editorial>
+                <disponible>no</disponible>
+        </libro>
+    </libros>
+
+    <autores>
+        <autor>
+            <nombre>Rómulo</nombre>
+            <apellido>Gallegos</apellido>
+            <nacionalidad>venezolano</nacionalidad>
+            <bibliografia>bibliografia</bibliografia>
+        </autor>
+
+        <autor>
+            <nombre>Gabriel</nombre>
+            <apellido>García Márquez</apellido>
+            <nacionalidad>colombiano</nacionalidad>
+            <bibliografia>bibliografia</bibliografia>
+        </autor>
+
+        <autor>
+            <nombre>Arturo</nombre>
+            <apellido>Úslar Pietri</apellido>
+            <nacionalidad>venezolano</nacionalidad>
+            <bibliografia>bibliografia</bibliografia>
+        </autor>
+    </autores>
+
+    <prestamos>
+        <prestamo>
+            <libro_id>ISBN456</libro_id>
+            <lector>Nombre del lector</lector>
+            <fecha_prestamo>2023-07-27</fecha_prestamo>
+            <fecha_devolucion>2023-08-10</fecha_devolucion>
+        </prestamo>
+    
+        <prestamo>
+            <libro_id>ISBN789</libro_id>
+            <lector>Nombre del lector</lector>
+            <fecha_prestamo>2023-07-27</fecha_prestamo>
+            <fecha_devolucion>2023-08-10</fecha_devolucion>
+        </prestamo>
+    </prestamos>
+</biblioteca>

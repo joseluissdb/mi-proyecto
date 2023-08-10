@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE lista_pacientes [
+   <!ELEMENT lista_pacientes (paciente)*>
+   <!ELEMENT paciente (nombre, apellidos, direccion, NIP, fecha_nacimiento, fecha_admision, telefonos)>
+   <!ELEMENT apellidos (apellido1, apellido2)>
+   <!ELEMENT telefonos (tel_casa?, tel_movil?, tel_emergencia?)>
+   <!ELEMENT nombre (#PCDATA)>
+   <!ELEMENT apellido1 (#PCDATA)>
+   <!ELEMENT apellido2 (#PCDATA)>
+   <!ELEMENT direccion (#PCDATA)>
+   <!ELEMENT NIP (#PCDATA)>
+   <!ELEMENT fecha_nacimiento (#PCDATA)>
+   <!ELEMENT fecha_admision (#PCDATA)>
+   <!ELEMENT tel_emergencia (#PCDATA)>
+   <!ELEMENT tel_movil (#PCDATA)>
+   <!ELEMENT tel_casa (#PCDATA)>
+]>
+
+
+<lista_pacientes>
+  <paciente>
+    <nombre>Papadimitriou</nombre> 
+    <apellidos>
+      <apellido1>Triantafyllou</apellido1>
+      <apellido2>Konstantinidis</apellido2>
+    </apellidos>
+    <direccion>Avenida de la cazuela, calle de la sarten, num 8 piso 2-D</direccion>
+    <NIP>65487</NIP>
+    <fecha_nacimiento>09/01/1948</fecha_nacimiento>
+    <fecha_admision>23/05/1979</fecha_admision>
+    <telefonos>
+      <tel_emergencia>112</tel_emergencia>
+    </telefonos>
+  </paciente>
+</lista_pacientes>

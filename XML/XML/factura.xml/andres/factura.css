@@ -1,0 +1,112 @@
+*{
+    position: relative;
+}
+factura{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+  padding: 0;
+}
+titulos{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-self: center;
+}
+h1,h2,h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+h1{
+    font-size: 40px;
+    padding: 20px;
+    color: white;
+    background-color: rgb(92, 92, 92);
+}
+h2{
+    font-size: 30px;
+    padding: 10px;
+    background-color: lightgrey;
+}
+h3{
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgb(230, 229, 229);
+}
+encabezado,facturaInfo,cliente,resumen{
+    position: relative;
+    text-transform: capitalize;
+    width: 30%;
+    border:solid 2px rgb(151, 151, 151);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-bottom: 10px;
+}
+encabezado::before,facturaInfo::before,cliente::before,resumen::before{
+text-align: center;
+font-weight: bold;
+font-size: 20px;
+padding: 10px;
+background-color: lightgray;
+}
+encabezado::before{
+content: "Datos Empresa";
+}
+encabezado>*,facturaInfo>*,cliente>*{
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+facturaInfo::before{
+    content: "Factura Info";
+}
+cliente::before{
+    content:"Datos Cliente"
+}
+resumen::before{
+    content:"Resumen Factura"
+}
+facturaDetalle{
+    display: table;
+    width: 97%;
+}
+titles,facturaDetalle>factura{
+    display: table-row;
+    margin-bottom: 5px;
+}
+titles>*,facturaDetalle>factura>*,resumen>*{
+    display: table-cell;
+   padding: 10px;
+}
+facturaDetalle>factura>*:nth-child(2n){
+   background-color: rgb(209, 209, 209);
+}
+facturaDetalle>factura>*:nth-child(2n){
+   background-color: rgb(209, 209, 209);
+}
+facturaDetalle>factura{
+    background-color: rgb(233, 233, 233);
+}
+resumen{
+    margin-top: 20px;
+    position: relative;
+    margin-left: auto;
+    right: 20px;
+}
+titles>*{
+    font-weight: bold;
+    background-color: grey;
+    color:white;
+    text-align: center;
+    text-transform: uppercase;
+}
+resumen{
+
+}

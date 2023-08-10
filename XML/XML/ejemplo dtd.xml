@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE holas SYSTEM "hola.dtd">
+<holas>
+    <empleado>
+        <nombre>Juan Pérez</nombre>
+        <direccion>Calle 123, Ciudad X</direccion>
+      </empleado>
+      <empleado>
+        <nombre>María Gómez</nombre>
+        <direccion>Avenida Principal, Ciudad Y</direccion>
+      </empleado>
+</holas>

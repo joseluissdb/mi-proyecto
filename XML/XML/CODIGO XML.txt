@@ -1,0 +1,9 @@
+<!DOCTYPE hechos_historicos [
+  <!ELEMENT hechos_historicos (hecho_historico*)>
+  <!ELEMENT hecho_historico (descripcion,fecha)>
+  <!ELEMENT descripcion (#PCDATA)>
+  <!ELEMENT fecha (dia, mes, anio)>
+  <!ELEMENT dia (#PCDATA)>
+  <!ELEMENT mes (#PCDATA)>
+  <!ELEMENT anio (#PCDATA)>
+]>

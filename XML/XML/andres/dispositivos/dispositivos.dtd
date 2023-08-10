@@ -1,0 +1,22 @@
+<!ELEMENT dispositivos (dispositivo*)>
+<!ELEMENT dispositivo (Nombre,Categoría,Marca,EspecificacionesTecnicas,Precio,Moneda,Stock,Ubicación)>
+<!ATTLIST dispositivo dID ID #REQUIRED>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Categoría (#PCDATA)>
+<!ELEMENT Precio (#PCDATA)>
+<!ELEMENT Moneda (#PCDATA)>
+<!ELEMENT Stock (#PCDATA)>
+<!ELEMENT Marca (MNombre,MOrigen)>
+<!ELEMENT MNombre (#PCDATA)>
+<!ELEMENT MOrigen (#PCDATA)>
+<!ELEMENT EspecificacionesTecnicas (Pantalla,Batería,Procesador,Cámara,SistemaOperativo)>
+<!ELEMENT Pantalla (#PCDATA)>
+<!ELEMENT Batería (#PCDATA)>
+<!ELEMENT Procesador (#PCDATA)>
+<!ELEMENT Cámara (#PCDATA)>
+<!ELEMENT SistemaOperativo (SONombre,SOVersión)>
+<!ELEMENT SONombre (#PCDATA)>
+<!ELEMENT SOVersión (#PCDATA)>
+<!ELEMENT Ubicación (Pasillo,Estanteria)>
+<!ELEMENT Pasillo (#PCDATA)>
+<!ELEMENT Estanteria (#PCDATA)>

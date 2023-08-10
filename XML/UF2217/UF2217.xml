@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE empleados SYSTEM "UF2217.dtd">-->
+<empleados xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="UF2217.xsd">
+    <empleado cod="e101">
+        <nombre>María García</nombre>
+        <edad>35</edad>
+        <cargo>Gerente de Ventas</cargo>
+        <departamento>Ventas</departamento>
+        <sueldo>50000</sueldo>
+        <fechanacimiento>1951-02-15</fechanacimiento>
+        <fechacontratacion>1985-05-14</fechacontratacion>        
+        <fechafallecimiento>2021-05-21</fechafallecimiento>
+        <fichacompleta>ficha completa del empleado</fichacompleta>
+    </empleado>
+    
+    <empleado cod="e102">
+        <nombre>Pedro López</nombre>
+        <edad>28</edad>
+        <cargo>Analista de Marketing</cargo>
+        <departamento>Marketing</departamento>
+        <sueldo>35000</sueldo>
+        <fechanacimiento>1951-02-15</fechanacimiento>
+        <fechacontratacion>1985-05-14</fechacontratacion>
+        <fechafallecimiento>2009-03-20</fechafallecimiento>
+        <fichacompleta></fichacompleta>
+    </empleado>
+    
+    <empleado cod="e103">
+        <nombre>Juan Ramírez</nombre>
+        <edad>42</edad>
+        <cargo>Gerente de Recursos Humanos</cargo>
+        <departamento>Recursos Humanos</departamento>
+        <sueldo>48000</sueldo>
+        <fechanacimiento>1960-07-12</fechanacimiento>
+        <fechacontratacion>1995-05-14</fechacontratacion>
+        <fechafallecimiento>2001-04-12</fechafallecimiento>
+        <fichacompleta></fichacompleta>
+    </empleado>
+    
+    <empleado cod="e104">
+        <nombre>Sofía Fernández</nombre>
+        <edad>25</edad>
+        <cargo>Programadora</cargo>
+        <departamento>Tecnología</departamento>
+        <sueldo>40000</sueldo>
+        <fechanacimiento>1979-01-02</fechanacimiento>
+        <fechacontratacion>1999-05-14</fechacontratacion>
+        <fechafallecimiento>2022-04-12</fechafallecimiento>
+        <fichacompleta></fichacompleta>
+    </empleado>
+</empleados>

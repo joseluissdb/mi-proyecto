@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="escuela.css" type="text/css"?>
+<escuela xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="escuela.xsd">
+    <header>
+        <h1>Escuela Todos Pasan</h1>
+        <h2>Aqui todos aprueban y si no lo forzamos</h2>
+    </header>
+    <aula id_aula="a1">
+        <profesor id_profesor="p1">
+            <nombre>John</nombre>
+            <apellido>Doe</apellido>
+            <telefono>+341234567890</telefono>
+            <DNI>123456789</DNI>
+           
+        </profesor>
+        <asignatura>Mates</asignatura>
+        <alumnos>
+            <alumno1>
+                <nombre>Alice</nombre>
+                <apellido>Smith</apellido>
+                <telefono>987-654-3210</telefono>
+                <DNI>987654321</DNI>
+                
+            </alumno1>
+            <alumno2>
+                <nombre>Bob</nombre>
+                <apellido>Johnson</apellido>
+                <telefono>555-555-5555</telefono>
+                <DNI>555555555</DNI>
+               
+            </alumno2>
+            <alumno3>
+                <nombre>Eve</nombre>
+                <apellido>Williams</apellido>
+                <telefono>111-222-3333</telefono>
+                <DNI>111222333</DNI>
+               
+            </alumno3>
+            <alumno4>
+                <nombre>Evegfg</nombre>
+                <apellido>Williamsfg</apellido>
+                <telefono>111-222-3344</telefono>
+                <DNI>111222344</DNI>
+               
+            </alumno4>
+        </alumnos>
+    </aula>
+    <aula id_aula="a2">
+        <profesor id_profesor="p2">
+            <nombre>John</nombre>
+            <apellido>Doe</apellido>
+            <telefono>+123-456-7890</telefono>
+            <DNI>123456789</DNI>
+           
+        </profesor>
+        <asignatura>Mates</asignatura>
+        <alumnos>
+            <alumno1>
+                <nombre>Alice</nombre>
+                <apellido>Smith</apellido>
+                <telefono>987-654-3210</telefono>
+                <DNI>987654321</DNI>
+                
+            </alumno1>
+            <alumno2>
+                <nombre>Bob</nombre>
+                <apellido>Johnson</apellido>
+                <telefono>555-555-5555</telefono>
+                <DNI>555555555</DNI>
+               
+            </alumno2>
+            <alumno3>
+                <nombre>Eve</nombre>
+                <apellido>Williams</apellido>
+                <telefono>111-222-3333</telefono>
+                <DNI>111222333</DNI>
+               
+            </alumno3>
+            <alumno4>
+                <nombre>Evegfg</nombre>
+                <apellido>Williamsfg</apellido>
+                <telefono>111-222-3344</telefono>
+                <DNI>111222344</DNI>
+               
+            </alumno4>
+        </alumnos>
+    </aula>
+    <aula id_aula="a3">
+        <profesor id_profesor="p3">
+            <nombre>John</nombre>
+            <apellido>Doe</apellido>
+            <telefono>+123-456-7890</telefono>
+            <DNI>123456789</DNI>
+           
+        </profesor>
+        <asignatura>lengua</asignatura>
+        <alumnos>
+            <alumno1>
+                <nombre>Alice</nombre>
+                <apellido>Smith</apellido>
+                <telefono>987-654-3210</telefono>
+                <DNI>987654321</DNI>
+                
+            </alumno1>
+            <alumno2>
+                <nombre>Bob</nombre>
+                <apellido>Johnson</apellido>
+                <telefono>555-555-5555</telefono>
+                <DNI>555555555</DNI>
+               
+            </alumno2>
+            <alumno3>
+                <nombre>Eve</nombre>
+                <apellido>Williams</apellido>
+                <telefono>111-222-3333</telefono>
+                <DNI>111222333</DNI>
+               
+            </alumno3>
+            <alumno4>
+                <nombre>Evegfg</nombre>
+                <apellido>Williamsfg</apellido>
+                <telefono>111-222-3344</telefono>
+                <DNI>111222344</DNI>
+                
+            </alumno4>
+        </alumnos>
+    </aula>
+    <aula id_aula="a4">
+        <profesor id_profesor="p4">
+            <nombre>John</nombre>
+            <apellido>Doe</apellido>
+            <telefono>+123-456-7890</telefono>
+            <DNI>123456789</DNI>
+           
+        </profesor>
+        <asignatura>ciencias</asignatura>
+        <alumnos>
+            <alumno1>
+                <nombre>Alice</nombre>
+                <apellido>Smith</apellido>
+                <telefono>987-654-3210</telefono>
+                <DNI>987654321</DNI>
+                
+            </alumno1>
+            <alumno2>
+                <nombre>Bob</nombre>
+                <apellido>Johnson</apellido>
+                <telefono>555-555-5555</telefono>
+                <DNI>555555555</DNI>
+               
+            </alumno2>
+            <alumno3>
+                <nombre>Eve</nombre>
+                <apellido>Williams</apellido>
+                <telefono>111-222-3333</telefono>
+                <DNI>111222333</DNI>
+               
+            </alumno3>
+            <alumno4>
+                <nombre>Evegfg</nombre>
+                <apellido>Williamsfg</apellido>
+                <telefono>111-222-3344</telefono>
+                <DNI>111222344</DNI>
+                
+            </alumno4>
+        </alumnos>
+    </aula>
+    <miEle>
+        <miElement></miElement>
+    </miEle>
+    <miEle2>
+        <miElement></miElement>
+        <miElement2></miElement2>
+    </miEle2>
+</escuela>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--EXAMEN E1-->
+
+<!DOCTYPE clientes_banco [
+   <!ELEMENT clientes_banco (cliente)*>
+   <!ELEMENT cliente (nombre, apellidos, direccion, num_cuenta, telefonos)>
+   <!ELEMENT apellidos (apellido1, apellido2)>
+   <!ELEMENT telefonos (tel_casa?, tel_movil?, tel_trabajo?)>
+   <!ATTLIST cliente id ID #REQUIRED>
+   <!ATTLIST num_cuenta tipo_cuenta (ahorros|cheques|IRA|deposito) #REQUIRED>
+   <!ELEMENT nombre (#PCDATA)>
+   <!ELEMENT apellido1 (#PCDATA)>
+   <!ELEMENT apellido2 (#PCDATA)>
+   <!ELEMENT direccion (#PCDATA)>
+   <!ELEMENT num_cuenta (#PCDATA)>
+   <!ELEMENT tipo_cuenta (#PCDATA)>
+   <!ELEMENT tel_trabajo (#PCDATA)>
+   <!ELEMENT tel_movil (#PCDATA)>
+   <!ELEMENT tel_casa (#PCDATA)>
+]>
+
+
+<clientes_banco>
+  <cliente id="_1">
+    <nombre>Nikolopoulos</nombre> 
+    <apellidos>
+      <apellido1>Apostolou</apellido1>
+      <apellido2>Athanasopoulos</apellido2>
+    </apellidos>
+    <direccion>Avenida del documento, calle del XML, num 18 piso bajo</direccion>
+    <num_cuenta tipo_cuenta="ahorros">78654123874598002458</num_cuenta>
+    <telefonos>
+      <tel_casa>962485236</tel_casa>
+    </telefonos>
+  </cliente>
+</clientes_banco>

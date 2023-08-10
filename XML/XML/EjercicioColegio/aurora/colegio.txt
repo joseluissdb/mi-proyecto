@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Definimos el día de la semana -->
+<xs:simpleType name="Dia">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Lunes"/>
+      <xs:enumeration value="Martes"/>
+      <xs:enumeration value="Miercoles"/>
+      <xs:enumeration value="Jueves"/>
+      <xs:enumeration value="Viernes"/>
+    </xs:restriction>
+</xs:simpleType>
+    <!-- Declaramos los alumnos-->
+<xs:element name="Alumnos">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Alumno" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+    <!-- Metemos a los alumnos en un grupo ejm"PrimeroA"-->
+<xs:element name="Grupo">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Nombre" type="xs:string"></xs:element>
+            <xs:element name="Dia" type="Dia" minOccurs="1"/>
+            <xs:element name="Hora" type="xs:string"></xs:element>   
+            <xs:element ref="Alumnos" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+    </xs:complexType>
+</xs:element>
+    <!-- Metemos el grupo en un aula con un profesor que imparte una asignatura-->
+<xs:element name="Aula">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Aula" type="xs:int"></xs:element>
+            <xs:element name="Profe" type="xs:string" minOccurs="1"></xs:element>
+            <xs:element name="Asignatura" type="xs:string" minOccurs="1"></xs:element>
+            <xs:element ref='Grupo' minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+    </xs:complexType>
+</xs:element>
+    <!-- Creamos colegio para que contenga aulas-->
+    <xs:element name="Colegio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Aula" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

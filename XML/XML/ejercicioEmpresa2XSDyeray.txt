@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="factura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="seccion_empresa" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombre_empresa" type="xs:string" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="direccion" type="xs:string" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="mail" type="xs:string" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="tlf" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="seccion_cabecera" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="num_factura" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="fecha" type="xs:date" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="notas" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="seccion_cliente" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_cliente" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="direccion" type="xs:string" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="email" type="xs:string" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="CIF" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="telefono" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="seccion_cuerpo" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_art" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="descripcion" type="xs:string" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="unidades" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="precio" type="xs:double" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="impuesto" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="total" type="xs:double" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="seccion_total" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="base_imponible" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="IGIC" type="xs:double" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="total" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

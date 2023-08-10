@@ -1,0 +1,29 @@
+<?xml version='1.01' encoding='utf-8'?>
+
+<!DOCTYPE modulo[
+  <!ELEMENT modulo (horas, fecha_inicio, fecha_fin, alumnos)>
+    <!ATTLIST modulo nombre (XML) #REQUIRED>
+    <!ATTLIST modulo caracter (obligatorio) #REQUIRED>
+    <!ELEMENT horas EMPTY>
+    <!ATTLIST horas semanales (2) #REQUIRED>
+    <!ELEMENT fecha_inicio EMPTY>
+    <!ATTLIST fecha_inicio fecha (20-sep-2021) #REQUIRED>
+    <!ELEMENT fecha_fin EMPTY>
+    <!ATTLIST fecha_fin fecha (30-jun-2022) #REQUIRED >
+    <!ELEMENT alumnos (alumno, alumno)>
+    <!ELEMENT alumno (#PCDATA)>
+]>
+
+<modulo nombre='XML' caracter="obligatorio">
+    <horas semanales='2'/>
+    <fecha_inicio fecha='20-sep-2021'/>
+    <fecha_fin fecha='30-jun-2022'/>
+    <alumnos>
+        <alumno>
+            MOTHER FUCKER
+        </alumno>
+         <alumno>
+            FATHER FUCKER
+        </alumno>
+    </alumnos>
+</modulo>

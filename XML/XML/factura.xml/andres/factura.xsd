@@ -1,0 +1,206 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    
+<xs:element name="factura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="h1" type="xs:string" fixed="Empresa Andres"></xs:element>
+                            <xs:element name="h2" type="xs:string" fixed="Factura"></xs:element>
+                            <xs:element name="h3" type="xs:string" fixed="Sociedad Anonima"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="encabezado">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="Nombre:[A-z]+"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="direccion">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="direccion:[A-z]*"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="CIF">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="CIF:[0-z]*"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="mail">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="mail:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="telefono">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="telefono:\+[1-9]\d{0,3}\s?\(?\d{1,}\)?\s?[-.\s]?\d{1,}[-.\s]?\d{1,}"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="facturaInfo">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                        <xs:element name="nFactura">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="nFactura:[0-9]*"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="fecha">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="fecha:(0[1-9]|[1-2][0-9]|3[0-1])-(0[1-9]|1[0-2])-(\d{4})"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="importeTotal">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="importeTotal:\d+(\.\d{1,2})?"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="impuesto">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="impuesto:\d{1,2}\%"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="base_imponible">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="base_imponible:\d+(\.\d{1,2})?"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="nota">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="nota:.*"></xs:pattern>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="cliente">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="cod">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="cod:.*"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="nombre">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="nombre:.*"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="direccion">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="direccion:.*"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="telefono">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="telefono:.*"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="email">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="email:.*"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="facturaDetalle">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titles">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="title_cod" fixed="cod"></xs:element>
+                                        <xs:element name="title_descripcion" fixed="descripcion"></xs:element>
+                                        <xs:element name="title_unidades" fixed="unidades"></xs:element>
+                                        <xs:element name="title_precio" fixed="precio"></xs:element>
+                                        <xs:element name="title_impuesto" fixed="impuesto"></xs:element>
+                                        <xs:element name="title_total" fixed="total"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="factura" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="cod" type="xs:string"></xs:element>
+                                        <xs:element name="descripcion" type="xs:string"></xs:element>
+                                        <xs:element name="unidades" type="xs:integer"></xs:element>
+                                        <xs:element name="precio" type="xs:decimal"></xs:element>
+                                        <xs:element name="impuesto" type="xs:decimal"></xs:element>
+                                        <xs:element name="total" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="resumen">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element  name="subtotal">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="subtotal:\d+(\.\d{1,2})?"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="impuesto">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="impuesto:\d{1,2}\%"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element  name="total">
+                                 <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="total:\d+(\.\d{1,2})?"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

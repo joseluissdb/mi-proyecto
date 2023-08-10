@@ -1,0 +1,170 @@
+container{
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+*{
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-bottom: 34px !important;
+    padding: 10px 0;
+    margin-bottom: 53px;
+    background: rgb(200,200,200);
+    background: linear-gradient(90deg, rgba(200,200,200,1) 0%, rgba(77,77,77,1) 100%);
+    z-index: 100 !important;
+}
+
+titulos>* {
+    z-index: 100;
+    margin: 0 auto;
+    left: 16px;
+}
+header::after{
+    content: "";
+    width: 100%;
+    height: 43px;
+    position: absolute;
+    bottom: -34px;
+    background: rgb(77,77,77);
+    background: linear-gradient(90deg, rgba(77,77,77,1) 0%, rgba(200,200,200,1) 100%);
+    z-index: 0 !important;
+    transform: rotate(1deg);
+}
+header>logo{
+    background-image: url(logo.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: -6px -9px;
+    width: 130px;
+    height: 130px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+dispositivo[dID="D01"]::after{
+    background-color: lightgray !important;
+    box-shadow: rgb(41, 41, 41) 5px 5px 1px 1px !important;
+}
+dispositivo[dID="D01"]>*{
+    background-color: rgb(83, 83, 83) !important;
+
+}
+titulos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    color: white;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+titulos>* {}
+
+titulos::after {
+    content: "";
+    background-color: #414141;
+    width: 100%;
+    height: 69%;
+    position: absolute;
+    transform: skewX(10deg) rotate(-1deg);
+    z-index: 0;
+    padding: 14px;
+    box-shadow: 12px 9px 1px 1px white;
+}
+titulos>principal{
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 2px 2px black;
+  
+}
+titulos>subTitulo{
+    font-size: 26px;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+dispositivos{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+dispositivos>*{
+    width: 300px;
+    padding: 20px;
+    margin: 9px auto;
+    display: flex;
+    flex-direction: column;
+    transform: skewX(-11deg);
+}
+
+dispositivo>* {
+    z-index: 1;
+    font-weight:  100;
+    padding: 4px;
+    background-color: black;
+    box-shadow: white 5px 5px;
+    margin-bottom: 10px;
+    transform: skewX(11deg);
+    color: #d1d1d1;
+}
+
+Marca::before {
+    content: "Marca";
+    color: white;
+}
+
+Categoría::before {
+    content: "Tipo:";
+    color: white;
+}
+
+Nombre::before {
+    content: "Nombre:";
+    font-weight: bold;
+    color: white;
+}
+
+dispositivo::after {
+    content: "";
+    background-color: grey;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+    z-index: 0;
+    box-shadow: 8px 10px 1px 1px;
+    font-weight: bold;
+}
+
+EspecificacionesTecnicas::before{
+    content: "Especificaciones Tecnicas:";
+    color:white;
+}
+Precio::before{
+    content: "Precio:";
+    color:white;
+}
+Moneda::before{
+    content: "Moneda:";
+    color:white;
+}
+Stock::before{
+    content: "Stock:";
+    color:white;
+}
+Ubicación::before{
+    content: "Ubicación:";
+    color:white;
+}

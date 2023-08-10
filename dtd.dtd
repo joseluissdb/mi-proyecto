@@ -1,0 +1,21 @@
+<!ELEMENT proveedores (proveedor+)> <!-- Define que el elemento raíz <proveedores> contiene uno o más elementos <proveedor>. -->
+<!ELEMENT proveedor (nombre, productos, telefono?)> <!-- Define la estructura del elemento <proveedor>. Contiene los subelementos <nombre> y <productos>, y un elemento opcional <telefono>. El signo de interrogación "?" después de <telefono> indica que este elemento es opcional y puede aparecer cero o una vez. -->
+<!ELEMENT nombre (#PCDATA)> <!-- Define el elemento <nombre> como un dato de texto (#PCDATA). -->
+<!ELEMENT productos (producto+)> <!-- Define el elemento <productos> como una lista de uno o más elementos <producto>. -->
+<!ELEMENT producto (#PCDATA)> <!-- Define el elemento <producto> como un dato de texto (#PCDATA). -->
+<!ELEMENT telefono (#PCDATA)> <!-- Define el elemento <telefono> como un dato de texto (#PCDATA). -->
+
+<!--
+MODIFICADORES:
+    Cuando se define un elemento en un DTD, 
+    se pueden utilizar los siguientes cuantificadores 
+    para especificar la cantidad de veces que el elemento puede aparecer:
+
+1) ? (signo de interrogación): Indica que el elemento es opcional y puede aparecer cero o una vez en el documento XML.
+
+2) + (signo de más): Indica que el elemento puede aparecer una o más veces en el documento XML.
+
+3) * (asterisco): Indica que el elemento puede aparecer cero o más veces en el documento XML.
+
+4) Sin cuantificador: Si no se especifica ningún cuantificador, el elemento se espera que aparezca exactamente una vez en el documento XML.
+-->

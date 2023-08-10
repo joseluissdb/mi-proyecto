@@ -1,0 +1,24 @@
+<!ELEMENT nombre_dispositivo (#PCDATA)>
+<!ELEMENT categoria (#PCDATA)>
+<!ELEMENT nombre_marca (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT marca (nombre_marca, origen)>
+<!ELEMENT pantalla (#PCDATA)>
+<!ELEMENT bateria (#PCDATA)>
+<!ELEMENT velocidad (#PCDATA)>
+<!ELEMENT procesador (tipo, velocidad)>
+<!ELEMENT resolucion (#PCDATA)>
+<!ELEMENT camara (resolucion)>
+<!ELEMENT nombre_so (#PCDATA)>
+<!ELEMENT version_so (#PCDATA)>
+<!ELEMENT SO (nombre_so?, version_so?)>
+<!ELEMENT especificaciones_tecnicas (pantalla, bateria, procesador, camara, SO)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT precio_dispositivo (precio)>
+<!ATTLIST precio_dispositivo moneda (EUR|USD)>
+<!ELEMENT stock (#PCDATA)>
+<!ELEMENT pasillo (#PCDATA)>
+<!ELEMENT estanteria (#PCDATA)>
+<!ELEMENT ubicacion (pasillo, estanteria)>
+<!ELEMENT dispositivo (nombre_dispositivo, categoria, marca, especificaciones_tecnicas, precio_dispositivo, stock, ubicacion)>
+<!ELEMENT catalogo_dispositivos (dispositivo*)>

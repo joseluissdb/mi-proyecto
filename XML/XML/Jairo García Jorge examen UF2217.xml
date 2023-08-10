@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8 " ?>
+<!DOCTYPE Empleados>
+<ELEMENT Pacientes (nombres+,apellidos+,direcciones+, números de indetificación del paciente+,fechas de nacimiento+,Fecha de admisión ,números de teléfonos+)>
+<ELEMENT Pacientes (#PCDATA|nombres+,apellidos+,direcciones+, números de indetificación del paciente+,fechas de nacimiento+,Fecha de admisión+,números de teléfonos+)>
+    <Pacientes> 
+        <Nombres>
+            <Nombre> Torquato</Nombre>
+            <Nombre> Nasser</Nombre>
+        </Nombres>
+        <Apellidos>
+        <Apellido> Movilla Peréz</Apellido>
+        <Apellido> Montañes Pelaéz</Apellido>
+        </Apellidos>
+        <direcciones>
+        <direccion> Calle Sotavento,Numero 97, San Juan de la Rambla</direccion>
+        <direccion> Calle Bosco ñoclot arteaga Numero 15, El Tanque</direccion>
+        </direcciones>
+        <Números indetificación Pacientes> 
+         <numero> 0091</numero>
+         <Numero> 0092</Numero>   
+        </Números>
+        <fechas_de_nacimiento> 
+            <fecha> 9 de Febrero de 1998</fecha>
+            <fecha> 24 de Noviembre de 2007</fecha>
+        </fechas_de_nacimiento> 
+<fecha_de_admisión>
+    <fecha> 15 de Agosto de 2008</fecha>
+    <fecha> 30 de Diciembre de 2009
+</fecha_de_admisión>   
+<Números>
+ <Telefonos> 
+<telefono_ofi> 123 768 097</telefono_ofi>
+<telefono_movil> 678 945 093</telefono_movil>
+<telefono_casa> 456 123 498</telefono_casa>
+ </Telefonos> 
+ <telefonos>
+<telefono_ofi> 098 450 721</telefono_ofi>
+<telefono_movil> 678 359 789</telefono_movil>
+<telefono_casa> 475 123 361</telefono_casa>
+ </telefonos>  
+</Números>
+</Pacientes>

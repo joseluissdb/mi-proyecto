@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE empresa SYSTEM "prueba.dtd"> 
+<empresa>
+    <titulo>Lista De Empleados</titulo>
+    <container>
+        <titles>
+            <title__nombre>nombre</title__nombre>
+            <title__apellidos>apellidos</title__apellidos>
+            <title__ID>identificacion</title__ID>
+            <title__dirección>dirección</title__dirección>
+            <title__posición>posición en la empresa</title__posición>
+            <title__departamento>departamento</title__departamento>
+            <title__fechaInicio>fecha de inicio</title__fechaInicio>
+            <title__telefono>
+                <title__telefono__t>Telefono</title__telefono__t>
+                <title__oficina>oficina</title__oficina>
+                <title__móvil>móvil</title__móvil>
+                <title__casa>casa</title__casa>
+            </title__telefono>
+        </titles>
+        <empleado>
+            <nombre>Juan</nombre>
+            <apellidos>Pérez Gómez</apellidos>
+            <ID>19234566</ID>
+            <dirección>Calle 123, Ciudad Ejemplo</dirección>
+            <posición>Analista de Datos</posición>
+            <departamento>Departamento de Informática</departamento>
+            <fechaInicio>2022-03-15</fechaInicio>
+            <telefono>
+                <oficina>12345678</oficina>
+                <móvil>987654321</móvil>
+                <casa>55555555</casa>
+            </telefono>
+        </empleado>
+        <empleado>
+            <nombre>María</nombre>
+            <apellidos>García López</apellidos>
+            <ID>19234566</ID>
+            <dirección>Avenida Principal 789, Otra Ciudad</dirección>
+            <posición>Gerente de Ventas</posición>
+            <departamento>Departamento de Ventas</departamento>
+            <fechaInicio>2021-06-10</fechaInicio>
+            <telefono>
+                <oficina>87654321</oficina>
+                <móvil>654321987</móvil>
+                <casa>33333333</casa>
+            </telefono>
+        </empleado>        
+    </container>
+</empresa>

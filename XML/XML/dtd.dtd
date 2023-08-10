@@ -1,0 +1,8 @@
+<!ELEMENT proveedores (proveedor+)> <!-- Define que el elemento raíz <proveedores> contiene uno o más elementos <proveedor>. -->
+<!ELEMENT proveedor (nombre, productos, telefono?)> <!-- Define la estructura del elemento <proveedor>. Contiene los subelementos <nombre> y <productos>, y un elemento opcional <telefono>. El signo de interrogación "?" después de <telefono> indica que este elemento es opcional y puede aparecer cero o una vez. -->
+<!ELEMENT nombre (#PCDATA)> <!-- Define el elemento <nombre> como un dato de texto (#PCDATA). -->
+<!ELEMENT productos (producto+)> <!-- Define el elemento <productos> como una lista de uno o más elementos <producto>. -->
+<!ELEMENT producto (#PCDATA)> <!-- Define el elemento <producto> como un dato de texto (#PCDATA). -->
+<!ELEMENT telefono (#PCDATA)> <!-- Define el elemento <telefono> como un dato de texto (#PCDATA). -->
+
+<!-- José L. Rodríguez H. -->

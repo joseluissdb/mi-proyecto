@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- EJERCICIO DAM -->
+
+<!DOCTYPE mod_xml [
+   <!ELEMENT mod_xml (alumno)*>
+   <!ELEMENT alumno (nombre, horas_semanales, fecha_inicio, fecha_fin)>
+   <!ATTLIST alumno id ID #REQUIRED>
+   <!ELEMENT nombre (#PCDATA)>
+   <!ELEMENT horas_semanales (#PCDATA)>
+   <!ELEMENT fecha_inicio (#PCDATA)>
+   <!ELEMENT fecha_fin (#PCDATA)>
+]>
+
+
+<mod_xml>
+  <alumno id="_1">
+    <nombre>Perry</nombre>
+    <horas_semanales>4</horas_semanales>
+    <fecha_inicio>20/09/2021</fecha_inicio>
+    <fecha_fin>30/06/2022</fecha_fin>
+  </alumno>
+  <alumno id="_2">
+    <nombre>Mary Tiffany</nombre>
+    <horas_semanales>4</horas_semanales>
+    <fecha_inicio>20/09/2021</fecha_inicio>
+    <fecha_fin>30/06/2022</fecha_fin>
+  </alumno>
+</mod_xml>

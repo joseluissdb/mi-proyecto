@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Colegio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="colegio.xsd">
+        <Aula>
+            <Aula>1</Aula>
+            <Profe>Profesor 1</Profe>
+            <Asignatura>Matemáticas</Asignatura>
+            <Grupo>
+                <Nombre>PrimeroA</Nombre>
+                <Dia>Lunes</Dia>
+                <Hora>8:00 AM</Hora>
+                <Alumnos>
+                    <NombreAlumno>Alumno 1</NombreAlumno>
+                    <Sexo>Hombre</Sexo>
+                    <Edad>15</Edad>
+                </Alumnos>
+                <Alumnos>
+                    <NombreAlumno>Alumno 2</NombreAlumno>
+                    <Sexo>Mujer</Sexo>
+                    <Edad>16</Edad>
+                </Alumnos>
+            </Grupo>
+            <Grupo>
+                <Nombre>PrimeroB</Nombre>
+                <Dia>Martes</Dia>
+                <Hora>9:00 AM</Hora>
+                <Alumnos>
+                    <NombreAlumno>Alumno 3</NombreAlumno>
+                    <Sexo>Hombre</Sexo>
+                    <Edad>14</Edad>
+                </Alumnos>
+                <Alumnos>
+                    <NombreAlumno>Alumno 4</NombreAlumno>
+                    <Sexo>Mujer</Sexo>
+                    <Edad>15</Edad>
+                </Alumnos>
+            </Grupo>
+        </Aula>
+        <Aula>
+            <Aula>2</Aula>
+            <Profe>Profesor 2</Profe>
+            <Asignatura>Ciencias</Asignatura>
+            <Grupo>
+                <Nombre>SegundoA</Nombre>
+                <Dia>Miercoles</Dia>
+                <Hora>10:00 AM</Hora>
+                <Alumnos>
+                    <NombreAlumno>Alumno 5</NombreAlumno>
+                    <Sexo>Hombre</Sexo>
+                    <Edad>16</Edad>
+                </Alumnos>
+                <Alumnos>
+                    <NombreAlumno>Alumno 6</NombreAlumno>
+                    <Sexo>Mujer</Sexo>
+                    <Edad>17</Edad>
+                </Alumnos>
+            </Grupo>
+            <Grupo>
+                <Nombre>SegundoB</Nombre>
+                <Dia>Jueves</Dia>
+                <Hora>11:00 AM</Hora>
+                <Alumnos>
+                    <NombreAlumno>Alumno 7</NombreAlumno>
+                    <Sexo>Hombre</Sexo>
+                    <Edad>15</Edad>
+                </Alumnos>
+                <Alumnos>
+                    <NombreAlumno>Alumno 8</NombreAlumno>
+                    <Sexo>Mujer</Sexo>
+                    <Edad>16</Edad>
+                </Alumnos>
+            </Grupo>
+        </Aula>
+    </Colegio>

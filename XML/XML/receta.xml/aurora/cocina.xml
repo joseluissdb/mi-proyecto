@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cocina SYSTEM "cocina.dtd">
+<cocina>
+  <receta nombre="Receta1" comensales="4">
+    <ingrediente nIngrediente="ingrediente1">Ingrediente1 2kg</ingrediente>
+    <ingrediente nIngrediente="ingrediente2">Ingrediente2 0.5kg</ingrediente>
+  </receta>
+</cocina>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tienda_en_linea>
+
+  <productos>
+    <producto id="1">
+      <nombre>iPhone 13</nombre>
+      <precio>999.99</precio>
+      <descripcion>Último modelo de iPhone</descripcion>
+      <categoria_ref id="1.1" />
+    </producto>
+    <producto id="2">
+      <nombre>MacBook Pro</nombre>
+      <precio>1999.99</precio>
+      <descripcion>Portátil potente con pantalla Retina</descripcion>
+      <categoria_ref id="1.2" />
+    </producto>
+    <producto id="3">
+      <nombre>Camiseta básica</nombre>
+      <precio>19.99</precio>
+      <descripcion>Camiseta de algodón suave</descripcion>
+      <categoria_ref id="2.1" />
+    </producto>
+  </productos>
+
+  <categorias>
+    <categoria id="1">
+      <nombre>Electrónicos</nombre>
+      <subcategorias>
+        <subcategoria id="1.1">
+          <nombre>Smartphones</nombre>
+        </subcategoria>
+        <subcategoria id="1.2">
+          <nombre>Laptops</nombre>
+        </subcategoria>
+      </subcategorias>
+    </categoria>
+    <categoria id="2">
+      <nombre>Ropa</nombre>
+      <subcategorias>
+        <subcategoria id="2.1">
+          <nombre>Camisetas</nombre>
+        </subcategoria>
+        <subcategoria id="2.2">
+          <nombre>Pantalones</nombre>
+        </subcategoria>
+      </subcategorias>
+    </categoria>
+  </categorias>
+
+  <usuarios>
+    <usuario id="1">
+      <nombre>Juan Pérez</nombre>
+      <direccion>Calle Principal, 123</direccion>
+      <productos_comprados>
+        <producto_ref id="1" />
+        <producto_ref id="3" />
+      </productos_comprados>
+    </usuario>
+    <usuario id="2">
+      <nombre>Maria Gómez</nombre>
+      <direccion>Avenida Secundaria, 456</direccion>
+      <productos_comprados>
+        <producto_ref id="2" />
+      </productos_comprados>
+    </usuario>
+  </usuarios>
+</tienda_en_linea>

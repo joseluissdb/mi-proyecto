@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="excolegio.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+
+<colegio>
+    <aula1>
+        <prof1>
+            <nombre>mario rossi</nombre>
+            <asinatura>fisica</asinatura>
+            <tel>654321655</tel>
+        </prof1>
+        <horas>09:00:00</horas>
+        <A1>
+            <nombre>gino</nombre>
+            <direcion>calle boe 9 madrid</direcion>
+            <tel>887698765</tel>
+        </A1>
+        <A2>
+            <nombre>sara</nombre>
+            <direcion>calle goblin 4 madrid</direcion>
+            <tel>887908098</tel>  
+        </A2>
+        <A3>
+            <nombre>liliana</nombre>
+            <direcion>calle vittoria 5 madrid</direcion>
+            <tel>444568765</tel>
+        </A3>
+        <A4>
+            <nombre>carlo</nombre>
+            <direcion>calle figaro 10 madrid</direcion>
+            <tel>888897765</tel>
+        </A4>
+    </aula1>
+    <aula2>
+        <prof2>
+            <nombre>jairo juan</nombre>
+            <asinatura>matematica</asinatura>
+            <tel>654344455</tel>
+        </prof2>
+        <horas>10:00:00</horas>
+        <A1>
+            <nombre>gino</nombre>
+            <direcion>calle boe 9 madrid</direcion>
+            <tel>887698765</tel>
+        </A1>
+        <A2>
+            <nombre>sara</nombre>
+            <direcion>calle goblin 4 madrid</direcion>
+            <tel>887908098</tel>  
+        </A2>
+        <A3>
+            <nombre>liliana</nombre>
+            <direcion>calle vittoria 5 madrid</direcion>
+            <tel>444568765</tel>
+        </A3>
+        <A4>
+            <nombre>carlo</nombre>
+            <direcion>calle figaro 10 madrid</direcion>
+            <tel>888897765</tel>
+        </A4>
+    </aula2>
+    <aula3>
+        <prof3>
+            <nombre>maria neri</nombre>
+            <asinatura>lengua</asinatura>
+            <tel>654377789</tel>
+        </prof3>
+        <horas>11:00:00</horas>
+        <A1>
+            <nombre>gino</nombre>
+            <direcion>calle boe 9 madrid</direcion>
+            <tel>887698765</tel>
+        </A1>
+        <A2>
+            <nombre>sara</nombre>
+            <direcion>calle goblin 4 madrid</direcion>
+            <tel>887908098</tel>  
+        </A2>
+        <A3>
+            <nombre>liliana</nombre>
+            <direcion>calle vittoria 5 madrid</direcion>
+            <tel>444568765</tel>
+        </A3>
+        <A4>
+            <nombre>carlo</nombre>
+            <direcion>calle figaro 10 madrid</direcion>
+            <tel>888897765</tel>
+        </A4>
+    </aula3>
+    <aula4>
+        <prof4>
+            <nombre>silvia filippo</nombre>
+            <asinatura>ciencias</asinatura>
+            <tel>64446655</tel>
+        </prof4>
+        <horas>12:00:00</horas>
+        <A1>
+            <nombre>gino</nombre>
+            <direcion>calle boe 9 madrid</direcion>
+            <tel>887698765</tel>
+        </A1>
+        <A2>
+            <nombre>sara</nombre>
+            <direcion>calle goblin 4 madrid</direcion>
+            <tel>887908098</tel>  
+        </A2>
+        <A3>
+            <nombre>liliana</nombre>
+            <direcion>calle vittoria 5 madrid</direcion>
+            <tel>444568765</tel>
+        </A3>
+        <A4>
+            <nombre>carlo</nombre>
+            <direcion>calle figaro 10 madrid</direcion>
+            <tel>888897765</tel>
+        </A4>
+    </aula4>
+</colegio>
+--------------------------------------------------------------shema------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="A1">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="direcion" type="xs:string"/>
+            <xs:element name="tel" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="A2">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="direcion" type="xs:string"/>
+            <xs:element name="tel" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="A3">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="direcion" type="xs:string"/>
+            <xs:element name="tel" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="A4">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="direcion" type="xs:string"/>
+            <xs:element name="tel" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="prof1">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="asinatura" type="xs:string"/>
+            <xs:element name="tel" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="prof2">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="asinatura" type="xs:string"/>
+            <xs:element name="tel" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="prof3">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="asinatura" type="xs:string"/>
+            <xs:element name="tel" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="prof4">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="asinatura" type="xs:string"/>
+            <xs:element name="tel" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="aula1">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="prof1" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="horas" type="xs:time"/>
+            <xs:element ref="A1" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="A2" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="A3" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="A4" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="aula2">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="prof2" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="horas" type="xs:time"/>
+            <xs:element ref="A1" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="A2" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="A3" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="A4" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="aula3">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="prof3" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="horas" type="xs:time"/>
+            <xs:element ref="A1" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="A2" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="A3" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="A4" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="aula4">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="prof4" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="horas" type="xs:time"/>
+            <xs:element ref="A1" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="A2" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="A3" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="A4" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="colegio">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="aula1" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="aula2" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="aula3" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="aula4" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+</xs:schema>
